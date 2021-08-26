@@ -1,1 +1,8 @@
-
+Create Ham and Cheese Sandwitch
+Step 1 obtain ham and cheese
+step 2 obtain bread
+step 3 obtain a plate
+step 4 place 2 pieces of bread on plate
+step 5 place ham on one slice of bread
+step 6 place cheese on ham
+step 7 place other piece of bread on cheese
