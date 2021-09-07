@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="jacks"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-09-06 10:09:32 PM"/>
+        <attribute name="created" value="amFja3M7TU9MTFk7MjAyMS0wOS0wNjswOTo1NjoxMyBQTTsyMjA5"/>
+        <attribute name="edited" value="amFja3M7TU9MTFk7MjAyMS0wOS0wNjsxMDowOTozMiBQTTsxOzIzMDg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Hours" type="Real" array="False" size=""/>
+            <declare name="Rate" type="Real" array="False" size=""/>
+            <output expression="&quot;Hourly Rate&quot;" newline="True"/>
+            <input variable="Hours"/>
+            <input variable="Rate"/>
+            <assign variable="Hourly Rate" expression="(Hours) * (Rate)"/>
+            <output expression="Weekly Rate is &quot;Hourly Rate&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
