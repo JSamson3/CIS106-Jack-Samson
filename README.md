@@ -4,3 +4,6 @@ I have taken this class because I am curious about the subject as well as the fa
 
 ## Assignment 2
 I decided on using Python because I had heard that it is a simple and easy to use programing language and more importantly easy to read as well as the fact that I know other people who use it so I can get additional outside assistance with various projects, so I do not stall on my work and things go very smoothly. I have also decided on using Visual Studio Code because that is what I am mostly familiar with because of past classes where I also used Visual Studio Code for things such as HTML, CSS, and basic text.
+
+## Assignment 3
+Today during these activities I learned about variables and how to declare them as well as the various different ways that they can be used primarily from these activities I believe that I will be able to use them for relatively simple programs for something like a calculator to make figuring out equations easier allowing me to speed up the process of completing my homework or school work faster. This should be a important lesson as variables are the most basic of things that should be understood when it comes to programing and to make sure I understood what declaring variables looks like in code I used the program to show me what my code would look like in other programing languages such as Python.
