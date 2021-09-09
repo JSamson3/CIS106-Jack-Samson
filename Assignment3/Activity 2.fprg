@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="jacks"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-09-09 01:31:13 PM"/>
+        <attribute name="created" value="amFja3M7TU9MTFk7MjAyMS0wOS0wOTswMToyNDozOCBQTTsyMjA2"/>
+        <attribute name="edited" value="amFja3M7TU9MTFk7MjAyMS0wOS0wOTswMTozMToxMyBQTTsxOzIzMDU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Age" type="Real" array="False" size=""/>
+            <input variable="Age"/>
+            <output expression="Age * 12 &amp;&quot; months old&quot;" newline="True"/>
+            <output expression="Age * 365 &amp;&quot; days old&quot;" newline="True"/>
+            <output expression="Age * (365*(24*(60*60))) &amp;&quot; Seconds old&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
