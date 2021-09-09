@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="jacks"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2021-09-09 01:42:13 PM"/>
+        <attribute name="saved" value="2021-09-09 02:54:23 PM"/>
         <attribute name="created" value="amFja3M7TU9MTFk7MjAyMS0wOS0wOTswMToyNDozOCBQTTsyMjA2"/>
-        <attribute name="edited" value="amFja3M7TU9MTFk7MjAyMS0wOS0wOTswMTo0MjoxMyBQTTsyOzIzMDg="/>
+        <attribute name="edited" value="amFja3M7TU9MTFk7MjAyMS0wOS0wOTswMjo1NDoyMyBQTTszOzIzMTQ="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -16,6 +16,7 @@
             <input variable="Age"/>
             <output expression="Age * 12 &amp;&quot; months old&quot;" newline="True"/>
             <output expression="Age * 365 &amp;&quot; days old&quot;" newline="True"/>
+            <output expression="Age * (365*24)&amp;&quot; hours old&quot;" newline="True"/>
             <output expression="Age * (365*(24*(60*60))) &amp;&quot; Seconds old&quot;" newline="True"/>
         </body>
     </function>
