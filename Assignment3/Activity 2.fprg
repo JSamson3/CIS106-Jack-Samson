@@ -4,14 +4,16 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="jacks"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2021-09-09 03:09:07 PM"/>
+        <attribute name="saved" value="2021-09-09 03:18:02 PM"/>
         <attribute name="created" value="amFja3M7TU9MTFk7MjAyMS0wOS0wOTswMToyNDozOCBQTTsyMjA2"/>
-        <attribute name="edited" value="amFja3M7TU9MTFk7MjAyMS0wOS0wOTswMzowOTowNyBQTTs0OzIzMTg="/>
+        <attribute name="edited" value="amFja3M7TU9MTFk7MjAyMS0wOS0wOTswMzoxODowMiBQTTs2OzIzMTU="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
             <comment text="A simple program that tells you your age in months days and seconds"/>
+            <declare name="Yearsinayear" type="Real" array="False" size=""/>
+            <assign variable="Yearsinayear" expression="1"/>
             <declare name="Monthsinayear" type="Real" array="False" size=""/>
             <assign variable="Monthsinayear" expression="12"/>
             <declare name="Daysinayear" type="Real" array="False" size=""/>
@@ -22,6 +24,7 @@
             <assign variable="Secondsinayear" expression="365*(24*(60*60))"/>
             <declare name="Age" type="Real" array="False" size=""/>
             <input variable="Age"/>
+            <output expression="Age * Yearsinayear &amp;&quot; Years old&quot;" newline="True"/>
             <output expression="Age * Monthsinayear &amp;&quot; months old&quot;" newline="True"/>
             <output expression="Age * Daysinayear &amp;&quot; days old&quot;" newline="True"/>
             <output expression="Age * Hoursinayear&amp;&quot; hours old&quot;" newline="True"/>

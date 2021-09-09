@@ -1,0 +1,26 @@
+Function Main
+    ... A simple program that tells you your age in months days and seconds
+    Declare Real Yearsinayear
+    
+    Assign Yearsinayear = 1
+    Declare Real Monthsinayear
+    
+    Assign Monthsinayear = 12
+    Declare Real Daysinayear
+    
+    Assign Daysinayear = 365
+    Declare Real Hoursinayear
+    
+    Assign Hoursinayear = 365*24
+    Declare Real Secondsinayear
+    
+    Assign Secondsinayear = 365*(24*(60*60))
+    Declare Real Age
+    
+    Input Age
+    Output Age * Yearsinayear &" Years old"
+    Output Age * Monthsinayear &" months old"
+    Output Age * Daysinayear &" days old"
+    Output Age * Hoursinayear&" hours old"
+    Output Age * Secondsinayear &" Seconds old"
+End

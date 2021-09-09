@@ -4,14 +4,16 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="jacks"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2021-09-09 03:04:24 PM"/>
+        <attribute name="saved" value="2021-09-09 03:16:59 PM"/>
         <attribute name="created" value="amFja3M7TU9MTFk7MjAyMS0wOS0wNjswOTo1NjoxMyBQTTsyMjA5"/>
-        <attribute name="edited" value="amFja3M7TU9MTFk7MjAyMS0wOS0wOTswMzowNDoyNCBQTTs5OzIzMTc="/>
+        <attribute name="edited" value="amFja3M7TU9MTFk7MjAyMS0wOS0wOTswMzoxNjo1OSBQTTsxMTsyMzY5"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
             <comment text="A simple program that tells you your weekly monthly and yearly wage"/>
+            <declare name="Weeksinaweek" type="Real" array="False" size=""/>
+            <assign variable="Weeksinaweek" expression="1"/>
             <declare name="Weeksinamonth" type="Real" array="False" size=""/>
             <assign variable="Weeksinamonth" expression="4"/>
             <declare name="Weeksinayear" type="Real" array="False" size=""/>
@@ -20,6 +22,8 @@
             <declare name="Rate" type="Real" array="False" size=""/>
             <input variable="Hours"/>
             <input variable="Rate"/>
+            <output expression="&quot;Hours =&quot; &amp; Hours" newline="True"/>
+            <output expression="&quot;Rate =&quot; &amp; Rate" newline="True"/>
             <output expression="&quot;Weekly &quot; &amp;Hours * Rate" newline="True"/>
             <output expression="&quot;Monthly &quot; &amp;(Hours * Rate)*Weeksinamonth" newline="True"/>
             <output expression="&quot;Yearly &quot; &amp;(Hours * Rate)*Weeksinayear" newline="True"/>

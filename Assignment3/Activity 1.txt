@@ -1,0 +1,22 @@
+Function Main
+    ... A simple program that tells you your weekly monthly and yearly wage
+    Declare Real Weeksinaweek
+    
+    Assign Weeksinaweek = 1
+    Declare Real Weeksinamonth
+    
+    Assign Weeksinamonth = 4
+    Declare Real Weeksinayear
+    
+    Assign Weeksinayear = 52
+    Declare Real Hours
+    Declare Real Rate
+    
+    Input Hours
+    Input Rate
+    Output "Hours =" & Hours
+    Output "Rate =" & Rate
+    Output "Weekly " &Hours * Rate
+    Output "Monthly " &(Hours * Rate)*Weeksinamonth
+    Output "Yearly " &(Hours * Rate)*Weeksinayear
+End
