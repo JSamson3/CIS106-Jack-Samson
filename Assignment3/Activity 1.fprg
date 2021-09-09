@@ -4,13 +4,14 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="jacks"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2021-09-09 01:21:03 PM"/>
+        <attribute name="saved" value="2021-09-09 01:41:08 PM"/>
         <attribute name="created" value="amFja3M7TU9MTFk7MjAyMS0wOS0wNjswOTo1NjoxMyBQTTsyMjA5"/>
-        <attribute name="edited" value="amFja3M7TU9MTFk7MjAyMS0wOS0wOTswMToyMTowMyBQTTs3OzIzMDk="/>
+        <attribute name="edited" value="amFja3M7TU9MTFk7MjAyMS0wOS0wOTswMTo0MTowOCBQTTs4OzIzMTc="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
+            <comment text="A simple program that tells you your weekly monthly and yearly wage"/>
             <declare name="Hours" type="Real" array="False" size=""/>
             <declare name="Rate" type="Real" array="False" size=""/>
             <input variable="Hours"/>
