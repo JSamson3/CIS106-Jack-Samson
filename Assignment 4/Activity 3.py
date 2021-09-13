@@ -6,8 +6,10 @@ inches = feet * 12
 kilometer = mile * 1.609344
 meter = kilometer * 1000
 centimeter = meter * 100
+
 print("input amount of miles")
 distance = float(input())
+
 print(str(distance*mile) + "miles long")
 print(str(distance*yards)+"yards long")
 print(str(distance*feet)+"feet long")
