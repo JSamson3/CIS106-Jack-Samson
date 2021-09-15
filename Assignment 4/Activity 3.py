@@ -1,4 +1,4 @@
-#a simple program designed to convwert however many miles into other units of mesurement
+#a simple program designed to convert miles into other units of mesurement
 mile = 1
 yards = 1760
 feet = yards * 3
