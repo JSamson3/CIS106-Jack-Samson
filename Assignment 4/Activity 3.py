@@ -1,4 +1,4 @@
-#a simple program designed to convert miles into other units of mesurement
+# a simple program designed to convert miles into other units of mesurement
 mile = 1
 yards = 1760
 feet = yards * 3
@@ -11,9 +11,9 @@ print("input amount of miles")
 distance = float(input())
 
 print(str(distance * mile) + "miles long")
-print(str(distance * yards)+"yards long")
-print(str(distance * feet)+"feet long")
-print(str(distance * inches)+"inches long")
-print(str(distance * kilometer)+"kilometers long")
-print(str(distance * meter)+"meters long")
-print(str(distance * centimeter)+"centimeters long")
+print(str(distance * yards)+ "yards long")
+print(str(distance * feet)+ "feet long")
+print(str(distance * inches)+ "inches long")
+print(str(distance * kilometer)+ "kilometers long")
+print(str(distance * meter)+ "meters long")
+print(str(distance * centimeter)+ "centimeters long")
