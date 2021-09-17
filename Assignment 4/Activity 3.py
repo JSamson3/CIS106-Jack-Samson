@@ -1,20 +1,19 @@
-# a simple program designed to convert miles into other units of mesurement
-mile = 1
-yards = 1760
-feet = yards * 3
-inches = feet * 12
-kilometer = mile * 1.609344
-meter = kilometer * 1000
-centimeter = meter * 100
+# A simple program designed to convert miles into other units of mesurement.
+
+MILES_PER_MILE = 1
+YARDS_PER_MILE = 1760
+FEET_PER_MILE = YARDS_PER_MILE * 3
+INCHES_PER_MILE = FEET_PER_MILE * 12
 
 print("input amount of miles")
 distance = float(input())
 
-print(str(distance * mile) + "miles long")
-print(str(distance * yards) + "yards long")
-print(str(distance * feet) + "feet long")
-print(str(distance * inches) + "inches long")
+miles = distance * MILES_PER_MILE
+yards = distance * YARDS_PER_MILE
+feet = distance * FEET_PER_MILE
+inches = distance * INCHES_PER_MILE
 
-print(str(distance * kilometer) + "kilometers long")
-print(str(distance * meter) + "meters long")
-print(str(distance * centimeter) + "centimeters long")
+print(str(miles) + "miles long")
+print(str(yards) + "yards long")
+print(str(feet) + "feet long")
+print(str(inches) + "inches long")
