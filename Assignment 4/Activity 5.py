@@ -1,15 +1,15 @@
 # a simple program to calculate square yards
 print("input X feet")
-X_Feet = float(input())
+x_feet = float(input())
 
 print("input Y feet")
-Y_Feet = float(input())
+y_feet = float(input())
 
-squarefootage=X_Feet*Y_Feet
+squarefootage=x_feet*y_feet
 squareyards=squarefootage/9
 
-print(str(X_Feet) + "X feet")
-print(str(Y_Feet) + "Y feet")
+print(str(x_feet) + "X feet")
+print(str(y_feet) + "Y feet")
 
 print(str (squarefootage) + "square footage")
 print(str (squareyards) + "square yards")
