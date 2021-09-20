@@ -13,10 +13,10 @@
         <body>
             <comment text="A simple program that tells you your dogs age in dog years"/>
             <declare name="name" type="String" array="False" size=""/>
-            <declare name="dogage" type="Integer" array="False" size=""/>
+            <declare name="age" type="Integer" array="False" size=""/>
             <input variable="name"/>
-            <input variable="dogage"/>
-            <output expression="name &amp;&quot; is &quot;&amp; dogage * 7 &amp;&quot; years old in dog years.&quot;" newline="True"/>
+            <input variable="age"/>
+            <output expression="name &amp;&quot; is &quot;&amp; age * 7 &amp;&quot; years old in dog years.&quot;" newline="True"/>
         </body>
     </function>
 </flowgorithm>
