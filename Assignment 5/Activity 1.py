@@ -15,12 +15,11 @@ def pay_func():
     input_func2()
     print(hours)
     print(rate)
-    print("Hours =" + str(hours))
-    print("Rate =" + str(rate))
+    print("hours =" + str(hours))
+    print("rate =" + str(rate))
     print("Weekly " + str(hours * rate))
     print("Monthly " + str(hours * rate * weeksinamonth))
     print("Yearly " + str(hours * rate * weeksinayear))
-
 
 
 weeksinaweek = 1
