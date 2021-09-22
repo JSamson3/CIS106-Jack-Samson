@@ -3,6 +3,7 @@ def input_func1():
     print("input weekly hours")
     global hours
     hours = float(input())
+    
 
 def input_func2():
     print("input hourly rate")
@@ -13,17 +14,16 @@ def input_func2():
 def pay_func():
     input_func1()
     input_func2()
-    print("Hours =" + str(hours))
-    print("Rate =" + str(rate))
+    print("hours =" + str(hours))
+    print("rate =" + str(rate))
     print("Weekly " + str(hours * rate))
-    print("Monthly " + str(hours * rate * weeksinamonth))
-    print("Yearly " + str(hours * rate * weeksinayear))
+    print("Monthly " + str(hours * rate * weeks_in_a_month))
+    print("Yearly " + str(hours * rate * weeks_in_a_year))
 
 
-
-weeksinaweek = 1
-weeksinamonth = 4
-weeksinayear = 52
+weeks_in_a_week = 1
+weeks_in_a_month = 4
+weeks_in_a_year = 52
 
 
 pay_func()
