@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="jacks"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2021-09-21 02:08:23 PM"/>
+        <attribute name="saved" value="2021-09-22 09:58:44 AM"/>
         <attribute name="created" value="amFja3M7REVTS1RPUC1VQTNLOTM2OzIwMjEtMDktMjA7MTA6MzM6NDQgQU07MjgwNQ=="/>
-        <attribute name="edited" value="amFja3M7REVTS1RPUC1VQTNLOTM2OzIwMjEtMDktMjE7MDI6MDg6MjMgUE07MzsyOTMx"/>
+        <attribute name="edited" value="amFja3M7REVTS1RPUC1VQTNLOTM2OzIwMjEtMDktMjI7MDk6NTg6NDQgQU07NDsyOTMz"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -19,12 +19,20 @@
             <output expression="name &amp;&quot; is &quot;&amp; dogage * 7 &amp;&quot; years old in dog years.&quot;" newline="True"/>
         </body>
     </function>
-    <function name="dogyears" type="Real" variable="dogyears">
+    <function name="dogage" type="Integer" variable="dogage">
         <parameters>
-            <parameter name="realage" type="Integer" array="False"/>
+            <parameter name="dogage" type="Integer" array="False"/>
         </parameters>
         <body>
-            <declare name="dogyears" type="Real" array="False" size=""/>
+            <declare name="dogage" type="Integer" array="False" size=""/>
+        </body>
+    </function>
+    <function name="inputname" type="String" variable="name">
+        <parameters>
+            <parameter name="name" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="name" type="String" array="False" size=""/>
         </body>
     </function>
 </flowgorithm>
