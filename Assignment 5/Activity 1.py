@@ -7,10 +7,17 @@ def pay_func():
     print("Yearly " + str(hours * rate * weeksinayear))
 
 
+
 weeksinaweek = 1
 weeksinamonth = 4
 weeksinayear = 52
 
-hours = float(input())
-rate = float(input())
+def input_func():
+    print("input weekly hours")
+    hours = float(input())
+    print("input hourly rate")
+    rate = float(input())
+
+
+input_func()
 pay_func()
