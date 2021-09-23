@@ -3,11 +3,13 @@ def input_func1():
     print("input weekly hours")
     global hours
     hours = float(input())
+    print(hours)
 
 def input_func2():
     print("input hourly rate")
     global rate
     rate = float(input())
+    print(rate)
     
 
 def pay_func():
