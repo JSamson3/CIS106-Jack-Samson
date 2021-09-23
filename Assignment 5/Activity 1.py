@@ -12,7 +12,7 @@ def input_func2():
     print(rate)
     
 
-def pay_func():
+def pay_func1():
     input_func1()
     input_func2()
     print(hours)
@@ -20,7 +20,9 @@ def pay_func():
     print("hours =" + str(hours))
     print("rate =" + str(rate))
     print("Weekly " + str(hours * rate))
+def pay_func2()
     print("Monthly " + str(hours * rate * weeksinamonth))
+def pay_func3()
     print("Yearly " + str(hours * rate * weeksinayear))
 
 
@@ -29,4 +31,6 @@ weeksinamonth = 4
 weeksinayear = 52
 
 
-pay_func()
+pay_func1()
+pay_func2()
+pay_func3()
