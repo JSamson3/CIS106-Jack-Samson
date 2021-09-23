@@ -46,4 +46,6 @@ def main_func():
 
 
 main_input()
-main_func()
+pay_func1()
+pay_func2()
+pay_func3()
