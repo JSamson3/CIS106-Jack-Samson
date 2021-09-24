@@ -4,10 +4,10 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="jacks"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2021-09-23 09:59:01 PM"/>
+        <attribute name="saved" value="2021-09-23 10:01:35 PM"/>
         <attribute name="created" value="amFja3M7REVTS1RPUC1VQTNLOTM2OzIwMjEtMDktMjA7MTA6MzM6NDQgQU07MjgwNQ=="/>
         <attribute name="edited" value="amFja3M7REVTS1RPUC1VQTNLOTM2OzIwMjEtMDktMjA7MTA6NDM6MzQgQU07MjsyOTE0"/>
-        <attribute name="edited" value="amFja3M7TU9MTFk7MjAyMS0wOS0yMzswOTo1OTowMSBQTTsxOzIzMTY="/>
+        <attribute name="edited" value="amFja3M7TU9MTFk7MjAyMS0wOS0yMzsxMDowMTozNSBQTTsyOzIzMDM="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -20,6 +20,18 @@
             <input variable="age"/>
             <assign variable="aaaa" expression="theanswer(name, age)"/>
             <output expression="aaaa" newline="True"/>
+        </body>
+    </function>
+    <function name="age" type="Integer" variable="age">
+        <parameters/>
+        <body>
+            <declare name="age" type="Integer" array="False" size=""/>
+        </body>
+    </function>
+    <function name="name" type="String" variable="name">
+        <parameters/>
+        <body>
+            <declare name="name" type="String" array="False" size=""/>
         </body>
     </function>
     <function name="theanswer" type="String" variable="aaaa">
