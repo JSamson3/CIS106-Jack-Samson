@@ -1,19 +1,18 @@
 # A simple program that tells you your weekly monthly and yearly wage
 def input_func1():
     print("input weekly hours")
+    global hours
     hours = float(input())
     return hours
+
     
 
 def input_func2():
     print("input hourly rate")
+    global rate
     rate = float(input())
     return rate
 
-
-def main_input():
-    input_func1()
-    input_func2()
 
 
 def pay_func1():
