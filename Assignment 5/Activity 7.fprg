@@ -4,35 +4,32 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="jacks"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2021-09-22 09:58:44 AM"/>
+        <attribute name="saved" value="2021-09-23 09:59:01 PM"/>
         <attribute name="created" value="amFja3M7REVTS1RPUC1VQTNLOTM2OzIwMjEtMDktMjA7MTA6MzM6NDQgQU07MjgwNQ=="/>
-        <attribute name="edited" value="amFja3M7REVTS1RPUC1VQTNLOTM2OzIwMjEtMDktMjI7MDk6NTg6NDQgQU07NDsyOTMz"/>
+        <attribute name="edited" value="amFja3M7REVTS1RPUC1VQTNLOTM2OzIwMjEtMDktMjA7MTA6NDM6MzQgQU07MjsyOTE0"/>
+        <attribute name="edited" value="amFja3M7TU9MTFk7MjAyMS0wOS0yMzswOTo1OTowMSBQTTsxOzIzMTY="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
             <comment text="A simple program that tells you your dogs age in dog years"/>
             <declare name="name" type="String" array="False" size=""/>
-            <declare name="dogage" type="Integer" array="False" size=""/>
+            <declare name="age" type="Integer" array="False" size=""/>
+            <declare name="aaaa" type="String" array="False" size=""/>
             <input variable="name"/>
-            <input variable="dogage"/>
-            <output expression="name &amp;&quot; is &quot;&amp; dogage * 7 &amp;&quot; years old in dog years.&quot;" newline="True"/>
+            <input variable="age"/>
+            <assign variable="aaaa" expression="theanswer(name, age)"/>
+            <output expression="aaaa" newline="True"/>
         </body>
     </function>
-    <function name="dogage" type="Integer" variable="dogage">
-        <parameters>
-            <parameter name="dogage" type="Integer" array="False"/>
-        </parameters>
-        <body>
-            <declare name="dogage" type="Integer" array="False" size=""/>
-        </body>
-    </function>
-    <function name="inputname" type="String" variable="name">
+    <function name="theanswer" type="String" variable="aaaa">
         <parameters>
             <parameter name="name" type="String" array="False"/>
+            <parameter name="age" type="Integer" array="False"/>
         </parameters>
         <body>
-            <declare name="name" type="String" array="False" size=""/>
+            <declare name="aaaa" type="String" array="False" size=""/>
+            <assign variable="aaaa" expression="name &amp;&quot; is &quot;&amp; age * 7 &amp;&quot; years old in dog years.&quot;"/>
         </body>
     </function>
 </flowgorithm>
