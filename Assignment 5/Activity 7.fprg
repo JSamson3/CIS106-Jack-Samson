@@ -4,10 +4,11 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="jacks"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2021-09-23 10:01:35 PM"/>
+        <attribute name="saved" value="2021-09-24 12:05:16 PM"/>
         <attribute name="created" value="amFja3M7REVTS1RPUC1VQTNLOTM2OzIwMjEtMDktMjA7MTA6MzM6NDQgQU07MjgwNQ=="/>
         <attribute name="edited" value="amFja3M7REVTS1RPUC1VQTNLOTM2OzIwMjEtMDktMjA7MTA6NDM6MzQgQU07MjsyOTE0"/>
         <attribute name="edited" value="amFja3M7TU9MTFk7MjAyMS0wOS0yMzsxMDowMTozNSBQTTsyOzIzMDM="/>
+        <attribute name="edited" value="RGF2ZTtJNDEwOzIwMjEtMDktMjQ7MTI6MDU6MTYgUE07MjsxOTk0"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -15,33 +16,45 @@
             <comment text="A simple program that tells you your dogs age in dog years"/>
             <declare name="name" type="String" array="False" size=""/>
             <declare name="age" type="Integer" array="False" size=""/>
-            <declare name="aaaa" type="String" array="False" size=""/>
-            <input variable="name"/>
-            <input variable="age"/>
-            <assign variable="aaaa" expression="theanswer(name, age)"/>
-            <output expression="aaaa" newline="True"/>
+            <declare name="dogYears" type="Integer" array="False" size=""/>
+            <assign variable="name" expression="GetName()"/>
+            <assign variable="age" expression="GetAge()"/>
+            <assign variable="dogYears" expression="CalculateDogYears(age)"/>
+            <call expression="DisplayResults(name, dogYears)"/>
         </body>
     </function>
-    <function name="age" type="Integer" variable="age">
-        <parameters/>
-        <body>
-            <declare name="age" type="Integer" array="False" size=""/>
-        </body>
-    </function>
-    <function name="name" type="String" variable="name">
-        <parameters/>
-        <body>
-            <declare name="name" type="String" array="False" size=""/>
-        </body>
-    </function>
-    <function name="theanswer" type="String" variable="aaaa">
+    <function name="CalculateDogYears" type="Integer" variable="dogYears">
         <parameters>
-            <parameter name="name" type="String" array="False"/>
             <parameter name="age" type="Integer" array="False"/>
         </parameters>
         <body>
-            <declare name="aaaa" type="String" array="False" size=""/>
-            <assign variable="aaaa" expression="name &amp;&quot; is &quot;&amp; age * 7 &amp;&quot; years old in dog years.&quot;"/>
+            <declare name="dogYears" type="Integer" array="False" size=""/>
+            <assign variable="dogYears" expression="age * 7"/>
+        </body>
+    </function>
+    <function name="DisplayResults" type="None" variable="">
+        <parameters>
+            <parameter name="name" type="String" array="False"/>
+            <parameter name="dogYears" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <output expression="name &amp; &quot; is &quot; &amp; dogYears &amp; &quot; in dog years&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="GetAge" type="Integer" variable="age">
+        <parameters/>
+        <body>
+            <declare name="age" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter dog's age:&quot;" newline="True"/>
+            <input variable="age"/>
+        </body>
+    </function>
+    <function name="GetName" type="String" variable="name">
+        <parameters/>
+        <body>
+            <declare name="name" type="String" array="False" size=""/>
+            <output expression="&quot;Enter dog's name:&quot;" newline="True"/>
+            <input variable="name"/>
         </body>
     </function>
 </flowgorithm>
