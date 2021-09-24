@@ -13,17 +13,17 @@ def input_func2():
     return rate
 
 
-def pay_func1():
+def processing_func1():
     print("hours =" + str(hours))
     print("rate =" + str(rate))
     print("Weekly " + str(hours * rate))
 
 
-def pay_func2():
+def processing_func2():
     print("Monthly " + str(hours * rate * weeksinamonth))
 
 
-def pay_func3():
+def processing_func3():
     print("Yearly " + str(hours * rate * weeksinayear))
 
 
@@ -35,9 +35,9 @@ weeksinayear = 52
 def main():
     input_func1()
     input_func2()
-    pay_func1()
-    pay_func2()
-    pay_func3()
+    processing_func1()
+    processing_func2()
+    processing_func3()
 
 
 main()
