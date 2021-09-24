@@ -5,7 +5,6 @@ def input_func1():
     hours = float(input())
     return hours
 
-    
 
 def input_func2():
     print("input hourly rate")
@@ -14,23 +13,17 @@ def input_func2():
     return rate
 
 
-
 def pay_func1():
-    hourlyrate = hours * rate
-    print(hours)
-    print(rate)
     print("hours =" + str(hours))
     print("rate =" + str(rate))
     print("Weekly " + str(hours * rate))
 
 
 def pay_func2():
-    monthlyrate = hours * rate * weeksinamonth
     print("Monthly " + str(hours * rate * weeksinamonth))
 
 
 def pay_func3():
-    yearlyrate = hours * rate * weeksinayear
     print("Yearly " + str(hours * rate * weeksinayear))
 
 
