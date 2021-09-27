@@ -22,7 +22,7 @@ def print_func1(hours, rate, hourlyrate):
     print("Weekly " + str(hourlyrate))
 
 
-def processing_func2(hours , rate):
+def processing_func2(hours, rate):
     monthlyrate = hours * rate * weeksinamonth
     return monthlyrate
 
@@ -31,7 +31,7 @@ def print_func2(monthlyrate):
     print("Monthly " + str(monthlyrate))
 
 
-def processing_func3(hours , rate):
+def processing_func3(hours, rate):
     yearlyrate = (hours * rate * weeksinayear)
     return yearlyrate
 
