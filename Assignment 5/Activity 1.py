@@ -11,12 +11,12 @@ def input_func2():
     return rate
 
 
-def processing_func1(hours , rate):
+def processing_func1(hours, rate):
     hourlyrate = hours * rate
     return hourlyrate
 
 
-def print_func1(hours , rate , hourlyrate):
+def print_func1(hours, rate, hourlyrate):
     print("hours =" + str(hours))
     print("rate =" + str(rate))
     print("Weekly " + str(hourlyrate))
@@ -48,10 +48,10 @@ weeksinayear = 52
 def main():
     hours = input_func1()
     rate = input_func2()
-    hourlyrate = processing_func1(hours , rate)
-    monthlyrate = processing_func2(hours , rate)
-    yearlyrate = processing_func3(hours , rate)
-    print_func1(hours , rate , hourlyrate)
+    hourlyrate = processing_func1(hours, rate)
+    monthlyrate = processing_func2(hours, rate)
+    yearlyrate = processing_func3(hours, rate)
+    print_func1(hours, rate, hourlyrate)
     print_func2(monthlyrate)
     print_func3(yearlyrate)
 
