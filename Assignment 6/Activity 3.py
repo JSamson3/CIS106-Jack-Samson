@@ -1,4 +1,4 @@
-#a simple program designed to convert miles into other units of mesurement
+# a simple program designed to convert miles into other units of mesurement
 mile = 1
 yards = 1760
 feet = yards * 3
@@ -40,18 +40,19 @@ def processing_func5(distance):
 
 
 def processing_func6(distance):
-    centimeterslong = distance * meter
+    centimeterslong = distance * centimeter
     return centimeterslong
 
 
-def print_func(distance, yardslong, feetlong, incheslong, kilometerlong, meterslong, centimeterslong):
+def print_func(distance, yardslong, feetlong, incheslong,
+kilometerlong, meterslong, centimeterslong):
     print(str(distance) + "miles long")
-    print(str(yardslong)+"yards long")
-    print(str(feetlong)+"feet long")
-    print(str(incheslong)+"inches long")
-    print(str(kilometerlong)+"kilometers long")
-    print(str(meterslong)+"meters long")
-    print(str(centimeterslong)+"centimeters long")
+    print(str(yardslong) + "yards long")
+    print(str(feetlong) + "feet long")
+    print(str(incheslong) + "inches long")
+    print(str(kilometerlong) + "kilometers long")
+    print(str(meterslong) + "meters long")
+    print(str(centimeterslong) + "centimeters long")
 
 
 def main():
