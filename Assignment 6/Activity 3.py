@@ -44,12 +44,14 @@ def processing_func6(distance):
     return centimeterslong
 
 
-def print_func(distance, yardslong, feetlong, incheslong,
-kilometerlong, meterslong, centimeterslong):
+def imperial_func(distance, yardslong, feetlong, incheslong):
     print(str(distance) + "miles long")
     print(str(yardslong) + "yards long")
     print(str(feetlong) + "feet long")
     print(str(incheslong) + "inches long")
+
+
+def metric_func(kilometerlong, meterslong, centimeterslong):
     print(str(kilometerlong) + "kilometers long")
     print(str(meterslong) + "meters long")
     print(str(centimeterslong) + "centimeters long")
@@ -57,13 +59,17 @@ kilometerlong, meterslong, centimeterslong):
 
 def main():
     distance = input_func()
+
     yardslong = processing_func1(distance)
     feetlong = processing_func2(distance)
     incheslong = processing_func3(distance)
+
     kilometerlong = processing_func4(distance)
     meterslong = processing_func5(distance)
     centimeterslong = processing_func6(distance)
-    print_func(distance, yardslong, feetlong, incheslong, kilometerlong, meterslong, centimeterslong)
+    
+    imperial_func(distance, yardslong, feetlong, incheslong)
+    metric_func(kilometerlong, meterslong, centimeterslong)
 
 
 main()
