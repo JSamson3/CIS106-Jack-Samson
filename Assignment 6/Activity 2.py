@@ -11,6 +11,7 @@ def input_func():
     age = float(input())
     return age
 
+
 def processing_func1(age):
     yearsold = age * yearsinayear
     return yearsold
