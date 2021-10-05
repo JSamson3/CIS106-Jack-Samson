@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="jacks"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-04 10:20:07 PM"/>
+        <attribute name="created" value="amFja3M7TU9MTFk7MjAyMS0xMC0wNDsxMDoxNToyMSBQTTsyMTg1"/>
+        <attribute name="edited" value="amFja3M7TU9MTFk7MjAyMS0xMC0wNDsxMDoyMDowNyBQTTsxOzIyOTM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <input variable="Distance"/>
+            <if expression="Value = true">
+                <then>
+                    <output expression="Metric" newline="True"/>
+                </then>
+                <else>
+                    <output expression="Imperial" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
