@@ -1,4 +1,4 @@
-# A simple program that tells you your age in months days and seconds by your choice
+# A program that tells you your age in months days and seconds by your choice
 yearsinayear = 1
 monthsinayear = 12
 daysinayear = 365
