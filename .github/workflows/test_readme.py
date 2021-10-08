@@ -223,7 +223,7 @@ def test_readme_capitalize_proper_nouns():
         return
 
     pattern = "boolean|flowgorithm| i |javascript" \
-        "|microsoft|pycharm|python|thonny"
+        "|microsoft|pycharm|python|thonny|youtube"
     matches = re.findall(pattern, text)
     matches = sorted(list(set(matches)))
     if len(matches) > 0:
