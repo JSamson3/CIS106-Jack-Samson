@@ -50,7 +50,7 @@ def yards(globalDistance):
 # A simple program that converts units to what system you choose
 globalDistance = localDistance()
 system = localSystem()
-if system == "Metric":
+if system == "metric":
     centimeters = centimeters(globalDistance)
     meters = meters(globalDistance)
     kilometers = kilometers(globalDistance)

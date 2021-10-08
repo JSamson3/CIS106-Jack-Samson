@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="jacks"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2021-10-07 08:15:23 PM"/>
+        <attribute name="saved" value="2021-10-07 08:17:38 PM"/>
         <attribute name="created" value="amFja3M7TU9MTFk7MjAyMS0xMC0wNzswNzozNjowNyBQTTsyMjAx"/>
-        <attribute name="edited" value="amFja3M7TU9MTFk7MjAyMS0xMC0wNzswODoxNToyMyBQTTs2OzIzMTA="/>
+        <attribute name="edited" value="amFja3M7TU9MTFk7MjAyMS0xMC0wNzswODoxNzozOCBQTTs3OzIzMTk="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -16,7 +16,7 @@
             <declare name="System" type="String" array="False" size=""/>
             <assign variable="GlobalDistance" expression="LocalDistance()"/>
             <assign variable="System" expression="LocalSystem()"/>
-            <if expression="System = &quot;Metric&quot;">
+            <if expression="System = &quot;metric&quot;">
                 <then>
                     <declare name="Kilometers" type="Real" array="False" size=""/>
                     <declare name="Meters" type="Real" array="False" size=""/>
