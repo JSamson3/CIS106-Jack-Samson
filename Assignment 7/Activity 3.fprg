@@ -4,22 +4,114 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="jacks"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2021-10-04 10:20:07 PM"/>
-        <attribute name="created" value="amFja3M7TU9MTFk7MjAyMS0xMC0wNDsxMDoxNToyMSBQTTsyMTg1"/>
-        <attribute name="edited" value="amFja3M7TU9MTFk7MjAyMS0xMC0wNDsxMDoyMDowNyBQTTsxOzIyOTM="/>
+        <attribute name="saved" value="2021-10-07 08:03:16 PM"/>
+        <attribute name="created" value="amFja3M7TU9MTFk7MjAyMS0xMC0wNzswNzozNjowNyBQTTsyMjAx"/>
+        <attribute name="edited" value="amFja3M7TU9MTFk7MjAyMS0xMC0wNzswODowMzoxNiBQTTszOzIzMDY="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
-            <input variable="Distance"/>
-            <if expression="Value = true">
+            <declare name="GlobalDistance" type="Real" array="False" size=""/>
+            <declare name="System" type="String" array="False" size=""/>
+            <assign variable="GlobalDistance" expression="LocalDistance()"/>
+            <assign variable="System" expression="LocalSystem()"/>
+            <if expression="System = &quot;Metric&quot;">
                 <then>
-                    <output expression="Metric" newline="True"/>
+                    <declare name="Kilometers" type="Real" array="False" size=""/>
+                    <declare name="Meters" type="Real" array="False" size=""/>
+                    <declare name="Centimeters" type="Real" array="False" size=""/>
+                    <assign variable="Centimeters" expression="Centimeters(GlobalDistance)"/>
+                    <assign variable="Meters" expression="Meters(GlobalDistance)"/>
+                    <assign variable="Kilometers" expression="Kilometers(GlobalDistance)"/>
+                    <output expression="&quot;In metric it would be&quot;&amp; Kilometers&amp;&quot; kilometers&quot;&amp; Meters&amp;&quot; meters&quot;&amp; Centimeters&amp;&quot; centimeters&quot;" newline="True"/>
                 </then>
                 <else>
-                    <output expression="Imperial" newline="True"/>
+                    <if expression="System = &quot;Imperial&quot;">
+                        <then>
+                            <declare name="Yards" type="Real" array="False" size=""/>
+                            <declare name="Feet" type="Real" array="False" size=""/>
+                            <declare name="Inches" type="Real" array="False" size=""/>
+                            <assign variable="Yards" expression="Yards(GlobalDistance)"/>
+                            <assign variable="Feet" expression="Feet(GlobalDistance)"/>
+                            <assign variable="Inches" expression="Inches(GlobalDistance)"/>
+                            <output expression="&quot;In Imperial&quot;&amp; Yards&amp;&quot; Yards&quot;&amp; Feet&amp;&quot; feet&quot;&amp; Inches&amp;&quot; inches&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Invalid&quot;" newline="True"/>
+                        </else>
+                    </if>
                 </else>
             </if>
+        </body>
+    </function>
+    <function name="Centimeters" type="Real" variable="Centimeters">
+        <parameters>
+            <parameter name="GlobalDistance" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Centimeters" type="Real" array="False" size=""/>
+            <assign variable="Centimeters" expression="GlobalDistance * (1.609344 * (1000 * 100))"/>
+        </body>
+    </function>
+    <function name="Feet" type="Real" variable="Feet">
+        <parameters>
+            <parameter name="GlobalDistance" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Feet" type="Real" array="False" size=""/>
+            <assign variable="Feet" expression="GlobalDistance * (1760 * 3)"/>
+        </body>
+    </function>
+    <function name="Inches" type="Real" variable="Inches">
+        <parameters>
+            <parameter name="GlobalDistance" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Inches" type="Real" array="False" size=""/>
+            <assign variable="Inches" expression="GlobalDistance * (1760 * (3 * 12))"/>
+        </body>
+    </function>
+    <function name="Kilometers" type="Real" variable="Kilometers">
+        <parameters>
+            <parameter name="GlobalDistance" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Kilometers" type="Real" array="False" size=""/>
+            <assign variable="Kilometers" expression="GlobalDistance * 1.609344"/>
+        </body>
+    </function>
+    <function name="LocalDistance" type="Real" variable="GlobalDistance">
+        <parameters/>
+        <body>
+            <declare name="GlobalDistance" type="Real" array="False" size=""/>
+            <output expression="&quot;Input distance in miles&quot;" newline="True"/>
+            <input variable="GlobalDistance"/>
+        </body>
+    </function>
+    <function name="LocalSystem" type="String" variable="System">
+        <parameters/>
+        <body>
+            <declare name="System" type="String" array="False" size=""/>
+            <output expression="&quot;Metric or Imperial?&quot;" newline="True"/>
+            <input variable="System"/>
+        </body>
+    </function>
+    <function name="Meters" type="Real" variable="Meters">
+        <parameters>
+            <parameter name="GlobalDistance" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Meters" type="Real" array="False" size=""/>
+            <assign variable="Meters" expression="GlobalDistance * (1.609344 * 1000)"/>
+        </body>
+    </function>
+    <function name="Yards" type="Real" variable="Yards">
+        <parameters>
+            <parameter name="GlobalDistance" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Yards" type="Real" array="False" size=""/>
+            <assign variable="Yards" expression="GlobalDistance * 1760"/>
         </body>
     </function>
 </flowgorithm>
