@@ -1,64 +1,64 @@
 # A program that tells you your age in months days and seconds by your choice
-yearsinayear = 1
-monthsinayear = 12
-daysinayear = 365
-hoursinayear = 365 * 24
-secondsinayear = 31536000
+
+MONTHS_IN_A_YEAR = 12
+DAYS_IN_A_YEAR = 365
+HOURS_IN_A_YEAR = 365 * 24
+SECONDS_IN_A_YEAR = 365 * 24 * 60 * 60
 
 
-def input_func():
+def get_age():
     print("input age in years")
     age = float(input())
     return age
 
 
-def what_age_func():
+def get_choice():
     print("(M)onths (D)ays (H)ours or (S)econds?")
     response = str(input())
     return response
 
 
-def months_processing(age):
-    monthsold = age * monthsinayear
-    return monthsold
+def process_months(age):
+    months = age * MONTHS_IN_A_YEAR
+    return months
 
 
-def days_processing(age):
-    daysold = age * daysinayear
-    return daysold
+def process_days(age):
+    days = age * DAYS_IN_A_YEAR
+    return days
 
 
-def hour_processing(age):
-    hoursold = age * hoursinayear
-    return hoursold
+def process_hours(age):
+    hours = age * HOURS_IN_A_YEAR
+    return hours
 
 
-def seconds_processing(age):
-    secondsold = age * secondsinayear
-    return secondsold
+def process_seconds(age):
+    seconds = age * SECONDS_IN_A_YEAR
+    return seconds
 
 
-def output_func(response, age, monthsold, daysold, hoursold, secondsold):
+def display_output(response, age, months, days, hours, seconds):
     if response == "m" or response == "M":
-        print(str(monthsold) + "Months old")
+        print(str(months) + "Months old")
     elif response == "d" or response == "D":
-        print(str(daysold) + "Days old")
+        print(str(days) + "Days old")
     elif response == "h" or response == "H":
-        print(str(hoursold) + "Hours old")
+        print(str(hours) + "Hours old")
     elif response == "s" or response == "S":
-        print(str(secondsold) + "Seconds old")
+        print(str(seconds) + "Seconds old")
     else:
         print("invalid selection")
 
 
 def main():
-    age = input_func()
-    response = what_age_func()
-    monthsold = months_processing(age)
-    daysold = days_processing(age)
-    hoursold = hour_processing(age)
-    secondsold = seconds_processing(age)
-    output_func(response, age, monthsold, daysold, hoursold, secondsold)
+    age = get_age()
+    response = get_choice()
+    months = process_months(age)
+    days = process_days(age)
+    hours = process_hours(age)
+    seconds = process_seconds(age)
+    display_output(response, age, months, days, hours, seconds)
 
 
 main()
