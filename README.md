@@ -16,3 +16,6 @@ During this assignment I had to use functions in order to create programs in my 
 
 ## Assignment 6
 During this assignment I learned about how to use code linters and how to use them to clean up your code. It was interesting to learn about them and the fact that I have used it and nothing happened only to learn that my Python code passes the linter’s tests. It was interesting to learn about code linters and it would be interesting to design my own code linter in order to relentlessly pester and annoy students into using a certain format of writing their own code that really would not benefit anyone else using the same code base because they would have to read it anyways and learn what the variables’ names are anyways.
+
+##Assignment 7
+During this assignment I learned about how to use if else statements in python in tandem along with functions I personally found flowgorithm to be very frustrating until I realized one simple thing and that was that it is just harder to work with Python because it feels like Python but just more tedious. Besides that I should be able to use this in a whole host of other applications as it is the most simple of things and the most important of commands to understand along with functions it’s a yes or no situation true or false. This was very fun.
