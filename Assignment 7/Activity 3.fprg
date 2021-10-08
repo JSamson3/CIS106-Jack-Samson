@@ -4,13 +4,14 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="jacks"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2021-10-07 08:03:16 PM"/>
+        <attribute name="saved" value="2021-10-07 08:15:23 PM"/>
         <attribute name="created" value="amFja3M7TU9MTFk7MjAyMS0xMC0wNzswNzozNjowNyBQTTsyMjAx"/>
-        <attribute name="edited" value="amFja3M7TU9MTFk7MjAyMS0xMC0wNzswODowMzoxNiBQTTszOzIzMDY="/>
+        <attribute name="edited" value="amFja3M7TU9MTFk7MjAyMS0xMC0wNzswODoxNToyMyBQTTs2OzIzMTA="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
+            <comment text="A simple program that converts units to what system you choose"/>
             <declare name="GlobalDistance" type="Real" array="False" size=""/>
             <declare name="System" type="String" array="False" size=""/>
             <assign variable="GlobalDistance" expression="LocalDistance()"/>
@@ -23,10 +24,10 @@
                     <assign variable="Centimeters" expression="Centimeters(GlobalDistance)"/>
                     <assign variable="Meters" expression="Meters(GlobalDistance)"/>
                     <assign variable="Kilometers" expression="Kilometers(GlobalDistance)"/>
-                    <output expression="&quot;In metric it would be&quot;&amp; Kilometers&amp;&quot; kilometers&quot;&amp; Meters&amp;&quot; meters&quot;&amp; Centimeters&amp;&quot; centimeters&quot;" newline="True"/>
+                    <call expression="MetricEnd(Meters,Kilometers,Centimeters,GlobalDistance)"/>
                 </then>
                 <else>
-                    <if expression="System = &quot;Imperial&quot;">
+                    <if expression="System = &quot;US&quot;">
                         <then>
                             <declare name="Yards" type="Real" array="False" size=""/>
                             <declare name="Feet" type="Real" array="False" size=""/>
@@ -34,7 +35,7 @@
                             <assign variable="Yards" expression="Yards(GlobalDistance)"/>
                             <assign variable="Feet" expression="Feet(GlobalDistance)"/>
                             <assign variable="Inches" expression="Inches(GlobalDistance)"/>
-                            <output expression="&quot;In Imperial&quot;&amp; Yards&amp;&quot; Yards&quot;&amp; Feet&amp;&quot; feet&quot;&amp; Inches&amp;&quot; inches&quot;" newline="True"/>
+                            <call expression="ImperialEnd(Inches,Feet,Yards,GlobalDistance)"/>
                         </then>
                         <else>
                             <output expression="&quot;Invalid&quot;" newline="True"/>
@@ -60,6 +61,17 @@
         <body>
             <declare name="Feet" type="Real" array="False" size=""/>
             <assign variable="Feet" expression="GlobalDistance * (1760 * 3)"/>
+        </body>
+    </function>
+    <function name="ImperialEnd" type="None" variable="">
+        <parameters>
+            <parameter name="Inches" type="Real" array="False"/>
+            <parameter name="Feet" type="Real" array="False"/>
+            <parameter name="Yards" type="Real" array="False"/>
+            <parameter name="GlobalDistance" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;In Imperial &quot;&amp; Yards&amp;&quot; Yards &quot;&amp; Feet&amp;&quot; feet &quot;&amp; Inches&amp;&quot; inches &quot;" newline="True"/>
         </body>
     </function>
     <function name="Inches" type="Real" variable="Inches">
@@ -92,7 +104,7 @@
         <parameters/>
         <body>
             <declare name="System" type="String" array="False" size=""/>
-            <output expression="&quot;Metric or Imperial?&quot;" newline="True"/>
+            <output expression="&quot;Metric or US?&quot;" newline="True"/>
             <input variable="System"/>
         </body>
     </function>
@@ -103,6 +115,17 @@
         <body>
             <declare name="Meters" type="Real" array="False" size=""/>
             <assign variable="Meters" expression="GlobalDistance * (1.609344 * 1000)"/>
+        </body>
+    </function>
+    <function name="MetricEnd" type="None" variable="">
+        <parameters>
+            <parameter name="Kilometers" type="Real" array="False"/>
+            <parameter name="Meters" type="Real" array="False"/>
+            <parameter name="Centimeters" type="Real" array="False"/>
+            <parameter name="GlobalDistance" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;In metric it would be &quot;&amp; Kilometers&amp;&quot; kilometers &quot;&amp; Meters&amp;&quot; meters &quot;&amp; Centimeters&amp;&quot; centimeters &quot;" newline="True"/>
         </body>
     </function>
     <function name="Yards" type="Real" variable="Yards">
