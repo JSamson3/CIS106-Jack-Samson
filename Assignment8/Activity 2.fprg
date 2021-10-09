@@ -4,31 +4,59 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="jacks"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2021-10-09 10:33:23 AM"/>
+        <attribute name="saved" value="2021-10-09 10:54:14 AM"/>
         <attribute name="created" value="amFja3M7TU9MTFk7MjAyMS0xMC0wOTsxMDowMDo0NiBBTTsyMTc2"/>
-        <attribute name="edited" value="amFja3M7TU9MTFk7MjAyMS0xMC0wOTsxMDozMzoyMyBBTTsxOzIyODU="/>
+        <attribute name="edited" value="amFja3M7TU9MTFk7MjAyMS0xMC0wOTsxMDo1NDoxNCBBTTsyOzIyODk="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
-            <output expression="&quot;how many scores?&quot;" newline="True"/>
-            <declare name="ScoreCount" type="Real" array="False" size=""/>
-            <input variable="ScoreCount"/>
-            <declare name="TotalScore" type="Real" array="False" size=""/>
-            <assign variable="TotalScore" expression="LoopAverage(ScoreCount)"/>
-            <output expression="&quot;Average Score is &quot;&amp; (TotalScore / ScoreCount)" newline="True"/>
+            <comment text="A simple program that tells you the average of your scores"/>
+            <declare name="GlobalScoreCount" type="Real" array="False" size=""/>
+            <assign variable="GlobalScoreCount" expression="InputFunc()"/>
+            <declare name="GlobalTotalScore" type="Real" array="False" size=""/>
+            <assign variable="GlobalTotalScore" expression="LoopAverage(GlobalScoreCount)"/>
+            <declare name="GlobalAverage" type="Real" array="False" size=""/>
+            <assign variable="GlobalAverage" expression="AverageProcessing(GlobalScoreCount, GlobalTotalScore)"/>
+            <call expression="AverageFunc(GlobalAverage)"/>
+        </body>
+    </function>
+    <function name="AverageFunc" type="None" variable="">
+        <parameters>
+            <parameter name="GlobalAverage" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;Average Score is &quot;&amp; GlobalAverage" newline="True"/>
+        </body>
+    </function>
+    <function name="AverageProcessing" type="Real" variable="Average">
+        <parameters>
+            <parameter name="GlobalScoreCount" type="Real" array="False"/>
+            <parameter name="GlobalTotalScore" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Average" type="Real" array="False" size=""/>
+            <assign variable="Average" expression="GlobalTotalScore/GlobalScoreCount"/>
+        </body>
+    </function>
+    <function name="InputFunc" type="Real" variable="InputScoreCount">
+        <parameters/>
+        <body>
+            <output expression="&quot;Input Score count&quot;" newline="True"/>
+            <declare name="InputScoreCount" type="Real" array="False" size=""/>
+            <input variable="InputScoreCount"/>
         </body>
     </function>
     <function name="LoopAverage" type="Real" variable="TotalScore">
         <parameters>
-            <parameter name="ScoreCount" type="Real" array="False"/>
+            <parameter name="GlobalScoreCount" type="Real" array="False"/>
         </parameters>
         <body>
             <declare name="NewScoreCount" type="Real" array="False" size=""/>
             <declare name="TotalScore" type="Real" array="False" size=""/>
             <assign variable="TotalScore" expression="0"/>
             <declare name="InputScore" type="Real" array="False" size=""/>
-            <assign variable="NewScoreCount" expression="ScoreCount"/>
+            <assign variable="NewScoreCount" expression="GlobalScoreCount"/>
             <while expression="NewScoreCount &gt; 0">
                 <output expression="&quot;Input &quot;&amp; NewScoreCount&amp;&quot; number of scores&quot;&amp;&#13;&#10;&quot;Total: &quot;&amp; TotalScore" newline="True"/>
                 <input variable="InputScore"/>
