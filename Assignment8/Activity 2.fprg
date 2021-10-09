@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="jacks"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-09 10:33:23 AM"/>
+        <attribute name="created" value="amFja3M7TU9MTFk7MjAyMS0xMC0wOTsxMDowMDo0NiBBTTsyMTc2"/>
+        <attribute name="edited" value="amFja3M7TU9MTFk7MjAyMS0xMC0wOTsxMDozMzoyMyBBTTsxOzIyODU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;how many scores?&quot;" newline="True"/>
+            <declare name="ScoreCount" type="Real" array="False" size=""/>
+            <input variable="ScoreCount"/>
+            <declare name="TotalScore" type="Real" array="False" size=""/>
+            <assign variable="TotalScore" expression="LoopAverage(ScoreCount)"/>
+            <output expression="&quot;Average Score is &quot;&amp; (TotalScore / ScoreCount)" newline="True"/>
+        </body>
+    </function>
+    <function name="LoopAverage" type="Real" variable="TotalScore">
+        <parameters>
+            <parameter name="ScoreCount" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="NewScoreCount" type="Real" array="False" size=""/>
+            <declare name="TotalScore" type="Real" array="False" size=""/>
+            <assign variable="TotalScore" expression="0"/>
+            <declare name="InputScore" type="Real" array="False" size=""/>
+            <assign variable="NewScoreCount" expression="ScoreCount"/>
+            <while expression="NewScoreCount &gt; 0">
+                <output expression="&quot;Input &quot;&amp; NewScoreCount&amp;&quot; number of scores&quot;&amp;&#13;&#10;&quot;Total: &quot;&amp; TotalScore" newline="True"/>
+                <input variable="InputScore"/>
+                <assign variable="NewScoreCount" expression="NewScoreCount - 1"/>
+                <assign variable="TotalScore" expression="TotalScore + InputScore"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
