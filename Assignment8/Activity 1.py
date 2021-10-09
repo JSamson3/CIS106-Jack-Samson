@@ -1,12 +1,12 @@
 def input_func1():
     print("Input number")
-    input_number = float(input())
+    input_number = int(input())
     return input_number
 
 
 def input_func2():
     print("How many times?")
-    input_times = float(input())
+    input_times = int(input())
     return input_times
 
 
