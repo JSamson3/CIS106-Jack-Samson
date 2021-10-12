@@ -1,3 +1,4 @@
+#A simple program that multiplies a given number a number of times
 def input_func1():
     print("Input number")
     input_number = int(input())
