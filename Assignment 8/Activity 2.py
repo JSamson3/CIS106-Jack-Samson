@@ -16,7 +16,7 @@ def loopAverage(globalScoreCount):
     totalScore = 0
     newScoreCount = globalScoreCount
     for newScoreCount in range(newScoreCount, 1 - 1, -1):
-        print("input score")
+        print("Input " + str(newScoreCount) + " number of scores" + "Total: " + str(totalScore))
         inputScore = float(input())
         totalScore = totalScore + inputScore
     
