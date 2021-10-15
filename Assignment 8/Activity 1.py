@@ -21,7 +21,7 @@ def processing_func(input_number, input_times, number_up):
 
 def the_loop(input_number, input_times):
     number_up = 1
-    while input_times > 0:
+    for output in range(input_times):
         input_times = input_times - 1
         output = processing_func(input_number, input_times, number_up)
         print(str(input_number) + " * " + str(number_up) + " = " + str(output))
