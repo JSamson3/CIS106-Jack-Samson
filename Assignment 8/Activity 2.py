@@ -7,7 +7,7 @@ def averageProcessing(globalScoreCount, globalTotalScore):
     return average
 
 def inputFunc():
-    print("Input Score count")
+    print("Input total Score count")
     inputScoreCount = float(input())
     
     return inputScoreCount
@@ -15,7 +15,7 @@ def inputFunc():
 def loopAverage(globalScoreCount):
     totalScore = 0
     newScoreCount = globalScoreCount
-    for newScoreCount in range(newScoreCount, 0 - 1, -1):
+    for newScoreCount in range(newScoreCount, 1 - 1, -1):
         print("input score")
         inputScore = float(input())
         totalScore = totalScore + inputScore
