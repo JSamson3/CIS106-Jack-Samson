@@ -7,7 +7,8 @@ def averageProcessing(globalScoreCount, globalTotalScore):
     return average
 
 def inputFunc():
-    inputScoreCount = float(input())
+    print("Input total score count")
+    inputScoreCount = int(input())
     
     return inputScoreCount
 

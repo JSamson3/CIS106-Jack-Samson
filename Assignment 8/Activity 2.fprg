@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="jacks"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2021-10-15 05:00:48 PM"/>
+        <attribute name="saved" value="2021-10-15 05:10:41 PM"/>
         <attribute name="created" value="amFja3M7TU9MTFk7MjAyMS0xMC0wOTsxMDowMDo0NiBBTTsyMTc2"/>
-        <attribute name="edited" value="amFja3M7TU9MTFk7MjAyMS0xMC0xNTswNTowMDo0OCBQTTs4OzIzMDk="/>
+        <attribute name="edited" value="amFja3M7TU9MTFk7MjAyMS0xMC0xNTswNToxMDo0MSBQTTsxMDsyMzQ0"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -42,7 +42,8 @@
     <function name="InputFunc" type="Real" variable="InputScoreCount">
         <parameters/>
         <body>
-            <declare name="InputScoreCount" type="Real" array="False" size=""/>
+            <output expression="&quot;Input total score count&quot;" newline="True"/>
+            <declare name="InputScoreCount" type="Integer" array="False" size=""/>
             <input variable="InputScoreCount"/>
         </body>
     </function>
