@@ -1,37 +1,37 @@
 # A simple program that multiplies a given number a number of times
-number_up = 1
 
 
-def input_func1():
+def get_number():
     print("Input number")
     input_number = int(input())
     return input_number
 
 
-def input_func2():
+def get_times():
     print("How many times?")
     input_times = int(input())
     return input_times
 
 
-def processing_func(input_number, input_times, number_up):
-    output = input_number * number_up
+def calculate_product(input_number, count):
+    output = input_number * count
     return output
 
 
-def the_loop(input_number, input_times):
-    number_up = 1
-    for output in range(input_times):
-        input_times = input_times - 1
-        output = processing_func(input_number, input_times, number_up)
-        print(str(input_number) + " * " + str(number_up) + " = " + str(output))
-        number_up = number_up + 1
+def display_expression(input_number, count, output):
+    print(str(input_number) + " * " + str(count) + " = " + str(output))
+
+
+def process_expressions(input_number, input_times):
+    for count in range(1, input_times + 1):
+        output = calculate_product(input_number, count)
+        display_expression(input_number, count, output)
 
 
 def main():
-    input_number = input_func1()
-    input_times = input_func2()
-    the_loop(input_number, input_times)
+    input_number = get_number()
+    input_times = get_times()
+    process_expressions(input_number, input_times)
 
 
 main()
