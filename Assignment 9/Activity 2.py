@@ -1,8 +1,8 @@
-def get_score_count(globalAverage):
-    print("Average Score is " + str(globalAverage))
+def get_score_count(Average):
+    print("Average Score is " + str(Average))
 
-def process_average(globalScoreCount, globalTotalScore):
-    average = globalTotalScore / globalScoreCount
+def process_average(ScoreCount, TotalScore):
+    average = TotalScore / ScoreCount
     
     return average
 
@@ -12,9 +12,9 @@ def get_total_score():
     
     return inputScoreCount
 
-def print_average(globalScoreCount):
+def print_average(ScoreCount):
     totalScore = 0
-    newScoreCount = globalScoreCount
+    newScoreCount = ScoreCount
     while newScoreCount > 0:
         print("Input " + str(newScoreCount) + " number of scores" + "Total: " + str(totalScore))
         inputScore = float(input())
@@ -25,7 +25,7 @@ def print_average(globalScoreCount):
 
 # Main
 # A simple program that tells you the average of your scores
-globalScoreCount = get_total_score()
-globalTotalScore = print_average(globalScoreCount)
-globalAverage = process_average(globalScoreCount, globalTotalScore)
-get_score_count(globalAverage)
+ScoreCount = get_total_score()
+TotalScore = print_average(ScoreCount)
+Average = process_average(ScoreCount, TotalScore)
+get_score_count(Average)
