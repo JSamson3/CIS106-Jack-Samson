@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="jacks"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2021-10-28 03:07:50 PM"/>
+        <attribute name="saved" value="2021-10-28 03:10:49 PM"/>
         <attribute name="created" value="amFja3M7TU9MTFk7MjAyMS0xMC0wOTsxMDowMDo0NiBBTTsyMTc2"/>
-        <attribute name="edited" value="amFja3M7TU9MTFk7MjAyMS0xMC0yODswMzowNzo1MCBQTTsxNzsyMzU5"/>
+        <attribute name="edited" value="amFja3M7TU9MTFk7MjAyMS0xMC0yODswMzoxMDo0OSBQTTsxODsyMzYy"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -44,10 +44,10 @@
             <assign variable="TotalScore" expression="0"/>
             <declare name="InputScore" type="Real" array="False" size=""/>
             <do expression="InputScore &gt; 0">
+                <assign variable="TotalScore" expression="TotalScore + InputScore"/>
                 <assign variable="NewScoreCount" expression="NewScoreCount + 1"/>
                 <output expression="&quot;Input &quot;&amp; NewScoreCount&amp;&quot; number of scores&quot;&amp;&#13;&#10;&quot;Total: &quot;&amp; TotalScore" newline="True"/>
                 <input variable="InputScore"/>
-                <assign variable="TotalScore" expression="TotalScore + InputScore"/>
             </do>
             <declare name="Average" type="Real" array="False" size=""/>
             <assign variable="Average" expression="averageProcessing(TotalScore, NewScoreCount)"/>
