@@ -20,7 +20,6 @@ def loopAverage():
     return average
 
 # Main
+# A simple program that tells you the average of your scores
 average = loopAverage()
 averageFunction(average)
-
-# A simple program that tells you the average of your scores

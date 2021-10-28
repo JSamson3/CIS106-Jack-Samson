@@ -4,17 +4,17 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="jacks"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2021-10-28 03:02:39 PM"/>
+        <attribute name="saved" value="2021-10-28 03:07:50 PM"/>
         <attribute name="created" value="amFja3M7TU9MTFk7MjAyMS0xMC0wOTsxMDowMDo0NiBBTTsyMTc2"/>
-        <attribute name="edited" value="amFja3M7TU9MTFk7MjAyMS0xMC0yODswMzowMjozOSBQTTsxNjsyMzYw"/>
+        <attribute name="edited" value="amFja3M7TU9MTFk7MjAyMS0xMC0yODswMzowNzo1MCBQTTsxNzsyMzU5"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
+            <comment text="A simple program that tells you the average of your scores"/>
             <declare name="Average" type="Real" array="False" size=""/>
             <assign variable="Average" expression="loopAverage()"/>
             <call expression="averageFunction(Average)"/>
-            <comment text="A simple program that tells you the average of your scores"/>
         </body>
     </function>
     <function name="averageFunction" type="None" variable="">
