@@ -4,35 +4,53 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="jacks"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2021-10-25 10:33:05 PM"/>
-        <attribute name="created" value="amFja3M7TU9MTFk7MjAyMS0xMC0yNTswOTo1MTo0MiBQTTsyMTk5"/>
-        <attribute name="edited" value="amFja3M7TU9MTFk7MjAyMS0xMC0yNTsxMDozMzowNSBQTTsyOzIyOTk="/>
+        <attribute name="saved" value="2021-10-28 02:49:26 PM"/>
+        <attribute name="created" value="amFja3M7TU9MTFk7MjAyMS0xMC0wOTsxMDowMDo0NiBBTTsyMTc2"/>
+        <attribute name="edited" value="amFja3M7TU9MTFk7MjAyMS0xMC0yODswMjo0OToyNiBQTTsxNTsyMzY1"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
-            <output expression="&quot;think of a number 1-100&quot;" newline="True"/>
-            <declare name="inputAnswer" type="String" array="False" size=""/>
-            <assign variable="inputAnswer" expression="getAnswer()"/>
+            <declare name="Average" type="Real" array="False" size=""/>
+            <assign variable="Average" expression="loopAverage()"/>
+            <call expression="averageFunction(Average)"/>
+            <comment text="A simple program that tells you the average of your scores"/>
         </body>
     </function>
-    <function name="getAnswer" type="String" variable="inputAnswer">
-        <parameters/>
-        <body>
-            <output expression="&quot;(h)igher? (l)ower? (e)qual?&quot;" newline="True"/>
-            <declare name="inputAnswer" type="String" array="False" size=""/>
-            <input variable="inputAnswer"/>
-        </body>
-    </function>
-    <function name="getProcess" type="None" variable="">
+    <function name="averageFunction" type="None" variable="">
         <parameters>
-            <parameter name="inputAnswer" type="String" array="False"/>
+            <parameter name="Average" type="Real" array="False"/>
         </parameters>
         <body>
-            <do expression="input &lt;= &quot;h&quot;&amp;&quot;l&quot;">
-                <declare name="" type="Integer" array="False" size=""/>
-                <assign variable="" expression=""/>
+            <output expression="&quot;Average Score is &quot;&amp; Average" newline="True"/>
+        </body>
+    </function>
+    <function name="averageProcessing" type="Real" variable="Average">
+        <parameters>
+            <parameter name="NewScoreCount" type="Real" array="False"/>
+            <parameter name="TotalScore" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Average" type="Real" array="False" size=""/>
+            <assign variable="Average" expression="TotalScore/NewScoreCount"/>
+        </body>
+    </function>
+    <function name="loopAverage" type="Real" variable="Average">
+        <parameters/>
+        <body>
+            <declare name="NewScoreCount" type="Real" array="False" size=""/>
+            <declare name="TotalScore" type="Real" array="False" size=""/>
+            <assign variable="NewScoreCount" expression="-1"/>
+            <assign variable="TotalScore" expression="0"/>
+            <declare name="InputScore" type="Real" array="False" size=""/>
+            <do expression="InputScore &gt; 0">
+                <assign variable="NewScoreCount" expression="NewScoreCount + 1"/>
+                <output expression="&quot;Input &quot;&amp; NewScoreCount&amp;&quot; number of scores&quot;&amp;&#13;&#10;&quot;Total: &quot;&amp; TotalScore" newline="True"/>
+                <input variable="InputScore"/>
+                <assign variable="TotalScore" expression="TotalScore + InputScore"/>
             </do>
+            <declare name="Average" type="Real" array="False" size=""/>
+            <assign variable="Average" expression="averageProcessing(TotalScore, NewScoreCount)"/>
         </body>
     </function>
 </flowgorithm>
