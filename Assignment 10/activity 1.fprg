@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="jacks"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-28 03:02:39 PM"/>
+        <attribute name="created" value="amFja3M7TU9MTFk7MjAyMS0xMC0wOTsxMDowMDo0NiBBTTsyMTc2"/>
+        <attribute name="edited" value="amFja3M7TU9MTFk7MjAyMS0xMC0yODswMzowMjozOSBQTTsxNjsyMzYw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Average" type="Real" array="False" size=""/>
+            <assign variable="Average" expression="loopAverage()"/>
+            <call expression="averageFunction(Average)"/>
+            <comment text="A simple program that tells you the average of your scores"/>
+        </body>
+    </function>
+    <function name="averageFunction" type="None" variable="">
+        <parameters>
+            <parameter name="Average" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;Average Score is &quot;&amp; Average" newline="True"/>
+        </body>
+    </function>
+    <function name="averageProcessing" type="Real" variable="Average">
+        <parameters>
+            <parameter name="NewScoreCount" type="Real" array="False"/>
+            <parameter name="TotalScore" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Average" type="Real" array="False" size=""/>
+            <assign variable="Average" expression="TotalScore/NewScoreCount"/>
+        </body>
+    </function>
+    <function name="loopAverage" type="Real" variable="Average">
+        <parameters/>
+        <body>
+            <declare name="NewScoreCount" type="Real" array="False" size=""/>
+            <declare name="TotalScore" type="Real" array="False" size=""/>
+            <assign variable="NewScoreCount" expression="-1"/>
+            <assign variable="TotalScore" expression="0"/>
+            <declare name="InputScore" type="Real" array="False" size=""/>
+            <do expression="InputScore &gt; 0">
+                <assign variable="NewScoreCount" expression="NewScoreCount + 1"/>
+                <output expression="&quot;Input &quot;&amp; NewScoreCount&amp;&quot; number of scores&quot;&amp;&#13;&#10;&quot;Total: &quot;&amp; TotalScore" newline="True"/>
+                <input variable="InputScore"/>
+                <assign variable="TotalScore" expression="TotalScore + InputScore"/>
+            </do>
+            <declare name="Average" type="Real" array="False" size=""/>
+            <assign variable="Average" expression="averageProcessing(TotalScore, NewScoreCount)"/>
+        </body>
+    </function>
+</flowgorithm>
