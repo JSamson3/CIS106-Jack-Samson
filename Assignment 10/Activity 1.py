@@ -2,7 +2,7 @@ def averageFunction(average):
     print("Average Score is " + str(average))
 
 def averageProcessing(newScoreCount, totalScore):
-    average = totalScore / newScoreCount
+    average = newScoreCount / totalScore
     
     return average
 

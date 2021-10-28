@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="jacks"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2021-10-28 03:13:10 PM"/>
+        <attribute name="saved" value="2021-10-28 03:17:49 PM"/>
         <attribute name="created" value="amFja3M7TU9MTFk7MjAyMS0xMC0wOTsxMDowMDo0NiBBTTsyMTc2"/>
-        <attribute name="edited" value="amFja3M7TU9MTFk7MjAyMS0xMC0yODswMzoxMzoxMCBQTTsxOTsyMzU0"/>
+        <attribute name="edited" value="amFja3M7TU9MTFk7MjAyMS0xMC0yODswMzoxNzo0OSBQTTsyMDsyMzYy"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -32,7 +32,7 @@
         </parameters>
         <body>
             <declare name="Average" type="Real" array="False" size=""/>
-            <assign variable="Average" expression="TotalScore/NewScoreCount"/>
+            <assign variable="Average" expression="NewScoreCount / TotalScore"/>
         </body>
     </function>
     <function name="loopAverage" type="Real" variable="Average">
