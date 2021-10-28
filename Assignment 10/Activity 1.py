@@ -9,11 +9,12 @@ def averageProcessing(newScoreCount, totalScore):
 def loopAverage():
     newScoreCount = -1
     totalScore = 0
+    inputScore = 0
     while True:    #This simulates a Do Loop
         totalScore = totalScore + inputScore
         newScoreCount = newScoreCount + 1
         print("Input " + str(newScoreCount) + " number of scores" + "Total: " + str(totalScore))
-        inputScore = float(input())
+        inputScore = int(input())
         if not(inputScore > 0): break   #Exit loop
     average = averageProcessing(totalScore, newScoreCount)
     

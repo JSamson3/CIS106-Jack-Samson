@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="jacks"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2021-10-28 03:10:49 PM"/>
+        <attribute name="saved" value="2021-10-28 03:13:10 PM"/>
         <attribute name="created" value="amFja3M7TU9MTFk7MjAyMS0xMC0wOTsxMDowMDo0NiBBTTsyMTc2"/>
-        <attribute name="edited" value="amFja3M7TU9MTFk7MjAyMS0xMC0yODswMzoxMDo0OSBQTTsxODsyMzYy"/>
+        <attribute name="edited" value="amFja3M7TU9MTFk7MjAyMS0xMC0yODswMzoxMzoxMCBQTTsxOTsyMzU0"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -40,9 +40,10 @@
         <body>
             <declare name="NewScoreCount" type="Real" array="False" size=""/>
             <declare name="TotalScore" type="Real" array="False" size=""/>
+            <declare name="InputScore" type="Integer" array="False" size=""/>
             <assign variable="NewScoreCount" expression="-1"/>
             <assign variable="TotalScore" expression="0"/>
-            <declare name="InputScore" type="Real" array="False" size=""/>
+            <assign variable="InputScore" expression="0"/>
             <do expression="InputScore &gt; 0">
                 <assign variable="TotalScore" expression="TotalScore + InputScore"/>
                 <assign variable="NewScoreCount" expression="NewScoreCount + 1"/>
