@@ -1,13 +1,13 @@
 # A simple program that gives you a multiplication table
 
 
-def get_number1():
+def get_starting():
     print("starting?")
     first_input = int(input())
     return first_input
 
 
-def get_number2():
+def get_ending():
     print("ending?")
     second_input = int(input())
     return second_input
@@ -26,8 +26,8 @@ def print_table(first_input, second_input):
 
 
 def main():
-    first_input = get_number1()
-    second_input = get_number2()
+    first_input = get_starting()
+    second_input = get_ending()
     print_table(first_input, second_input)
 
 
