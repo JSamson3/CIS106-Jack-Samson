@@ -25,3 +25,6 @@ During this assignment I learned about For loops in Python and how to best use t
 
 ## Assignment 9
 During this lesson I learned about loops and how to use things such as while in Python to preform things a select number of times such as a increasing math equation or to take multiple inputs and create an average score. I am sure that I can use this in a large amount of scripts for large amounts of repetitive tasks. I also learned about the importance of sequence in code as multiple times I had two while statements inside of each other resulting in the Python script not completing itself as well as my variables not being available before I assign them in a function later on in the program.
+
+## Assignment 10
+During this lesson I learned about do while loops in Python as well as nested loops in Python as well as how to use them to their greatest effect. I am sure that I can use this to create many interesting programs that can take user input to generate many different things that could be read. I also learned about loops and how to properly structure them to only do certain things a certain amount of times to my advantage such as only printing out something once or to have a loop complete its self and then move on to the next loop to continue to do what I need it to do
