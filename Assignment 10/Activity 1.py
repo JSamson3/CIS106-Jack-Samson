@@ -15,7 +15,7 @@ def loopAverage():
         newScoreCount = newScoreCount + 1
         print("Input " + str(newScoreCount) + " number of scores" + "Total: " + str(totalScore))
         inputScore = int(input())
-        if not(inputScore > 0): break   #Exit loop
+        if not(inputScore > -1): break   #Exit loop
     average = averageProcessing(totalScore, newScoreCount)
     
     return average
