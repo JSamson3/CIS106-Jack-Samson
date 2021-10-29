@@ -2,13 +2,13 @@
 
 
 def get_number1():
-    print("first input?")
+    print("starting?")
     first_input = int(input())
     return first_input
 
 
 def get_number2():
-    print("second input?")
+    print("ending?")
     second_input = int(input())
     return second_input
 
@@ -29,7 +29,6 @@ def main():
     first_input = get_number1()
     second_input = get_number2()
     print_table(first_input, second_input)
-    print("end")
 
 
 main()
