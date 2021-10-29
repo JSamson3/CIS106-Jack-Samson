@@ -2,30 +2,33 @@
 
 
 def get_number1():
-    print("first?")
-    input1 = int(input())
-    return input1
+    print("FirstInput?")
+    FirstInput = int(input())
+    return FirstInput
 
 
 def get_number2():
     print("second?")
-    input2 = int(input())
-    return input2
+    SecondInput = int(input())
+    return SecondInput
 
 
-def print_table(input1, input2):
-    print((""), end = "")
-    for a in range(input1, input2 + 1):
-        print((a), end = " ")
-        for b in range(input1, input2 + 1):
+def print_table(FirstInput, SecondInput):
+    print((" "), end=" ")
+    for c in range(FirstInput, SecondInput + 1):
+        print((c),end=" ")
+    print()
+    for a in range(FirstInput, SecondInput + 1):
+        print((a), end=" ")
+        for b in range(FirstInput, SecondInput + 1):
             print((a * b), end=" ")
         print()
 
 
 def main():
-    input1 = get_number1()
-    input2 = get_number2()
-    print_table(input1, input2)
+    FirstInput = get_number1()
+    SecondInput = get_number2()
+    print_table(FirstInput, SecondInput)
     print("end")
 
 
