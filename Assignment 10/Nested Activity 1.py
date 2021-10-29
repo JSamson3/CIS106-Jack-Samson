@@ -2,13 +2,13 @@
 
 
 def get_starting():
-    print("starting?")
+    print("input starting value")
     starting_input = int(input())
     return starting_input
 
 
 def get_ending():
-    print("ending?")
+    print("input ending value")
     ending_input = int(input())
     return ending_input
 
