@@ -11,9 +11,9 @@ def get_number2():
 
 
 def print_table(input1, input2):
-    for a in range(0, input1 + 1):
-        for b in range(0, input2 + 1):
-            print((a * b), end = " ")
+    for a in range(input1, input2+1):
+        for b in range(input1, input2+1):
+            print((a * b), end=" ")
         print()
 
 
