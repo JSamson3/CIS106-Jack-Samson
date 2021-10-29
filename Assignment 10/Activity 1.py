@@ -1,12 +1,12 @@
-def averageFunction(average):
+def display_average(average):
     print("Average Score is " + str(average))
 
-def averageProcessing(newScoreCount, totalScore):
+def calculate_average(newScoreCount, totalScore):
     average = newScoreCount / totalScore
     
     return average
 
-def loopAverage():
+def get_average():
     newScoreCount = -1
     totalScore = 0
     inputScore = 0
@@ -16,11 +16,11 @@ def loopAverage():
         print("Input " + str(newScoreCount) + " number of scores" + "Total: " + str(totalScore))
         inputScore = int(input())
         if not(inputScore > -1): break   #Exit loop
-    average = averageProcessing(totalScore, newScoreCount)
+    average = calculate_average(totalScore, newScoreCount)
     
     return average
 
 # Main
 # A simple program that tells you the average of your scores
-average = loopAverage()
-averageFunction(average)
+average = get_average()
+display_average(average)
