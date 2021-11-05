@@ -1,3 +1,4 @@
+# A program that calculates averages, max, and min
 def get_times():
     print("How many times?")
     input_times = int(input())
@@ -6,9 +7,9 @@ def get_times():
 
 def process_inputs(input_times):
     scores = [None] * input_times
-    for count in range (0 , input_times):
+    for count in range(0, input_times):
         print(scores)
-        print("input number")
+        print("input score")
         scores[count] = (int(input()))
     print(scores)
     return scores
