@@ -5,11 +5,11 @@ def get_times():
 
 
 def process_inputs(input_times):
-    scores = []
+    scores = [None] * input_times
     for count in range (0 , input_times):
         print(scores)
         print("input number")
-        scores.append(int(input()))
+        scores[count] = (int(input()))
     print(scores)
     return scores
 
@@ -28,6 +28,10 @@ def calculate_average(scores):
         output = output + x
     number = len(scores)
     average = output / number
+    return average
+
+
+def print_average(average):
     print("average is", average)
     
 
@@ -36,7 +40,8 @@ def main():
     scores = process_inputs(input_times)
     calculate_max(scores)
     calculate_min(scores)
-    calculate_average(scores)
+    average = calculate_average(scores)
+    print_average(average)
 
 
 main()
