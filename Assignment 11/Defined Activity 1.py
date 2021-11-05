@@ -39,7 +39,7 @@ def loop_function(month_input, year_input, days):
             print("invalid year")
             break
         month_input = get_month()
-        if month_input >= 11 or month_input <= 0:
+        if month_input >= 11 or month_input <= -1:
             print("invalid month")
             break
         days = process_leap(year_input)
