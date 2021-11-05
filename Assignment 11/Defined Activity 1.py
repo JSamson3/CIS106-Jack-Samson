@@ -13,7 +13,7 @@ def get_month():
 def get_year():
     print("enter year")
     year_input = int(input())
-    if year_input <= -1:
+    if year_input <= 0:
         print("invalid year")
         quit()
     return year_input
