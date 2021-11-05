@@ -31,9 +31,9 @@ def process_leap(year_input):
 
 
 def display_array(month_input, days_in_year, year_input):
-    months_in_year = ["january", "febuary", "march", "april", "may",
-     "june", "july", "august", "september",
-      "october", "november", "december"]
+    months_in_year = ["January", "Febuary", "March", "April", "May",
+     "June", "July", "August", "September",
+      "October", "November", "December"]
     print(months_in_year[month_input], year_input, "has", days_in_year[month_input], "days")
 
 
@@ -42,10 +42,8 @@ def loop_function(month_input, year_input):
         month_input = get_month()
         year_input = get_year()
         if month_input >= 11 or month_input <= 0:
-            print("invalid")
             break
         if year_input >= 0:
-            print("invalid")
             break
         days_in_year = process_leap(year_input)
         display_array(month_input, days_in_year, year_input)
