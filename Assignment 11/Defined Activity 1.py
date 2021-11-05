@@ -20,42 +20,41 @@ def get_year():
 
 
 def process_leap(year_input): 
-    Days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 30]   
+    days_in_year = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 30]   
     if year_input % 4 == 0 and year_input % 100 != 0:
         print(year_input, "is a Leap Year")
-        Days[1] = 29
+        days_in_year[1] = 29
     elif year_input % 100 == 0:
         print(year_input, "is not a Leap Year")
     elif year_input % 400 ==0:
         print(year_input, "is a Leap Year")
-        Days[1] = 29
+        days_in_year[1] = 29
     else:
         print(year_input, "is not a Leap Year")
-    return Days
+    return days_in_year
 
 
-def display_array(month_input, Days):
-    Months = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"]
-    print(Months[month_input])
-    print(Days[month_input])
+def display_array(month_input, days_in_year):
+    months_in_year = ["jan", "feb", "mar", "apr", "may",
+     "jun", "jul", "aug", "sep", "oct", "nov", "dec"]
+    print(months_in_year[month_input])
+    print(days_in_year[month_input])
 
 
 def loop_function(month_input, year_input):
     while 11 > month_input > 0 or year_input > 0:
         month_input = get_month()
         year_input = get_year()
-        Days = process_leap(year_input)
-        display_array(month_input, Days)
-
-        
+        days_in_year = process_leap(year_input)
+        display_array(month_input, days_in_year)
 
 
 def main():
-        month_input = get_month()
-        year_input = get_year()
-        Days = process_leap(year_input)
-        display_array(month_input, Days)
-        loop_function(month_input, year_input)
+    year_input = get_year()
+    month_input = get_month()
+    days_in_year = process_leap(year_input)
+    display_array(month_input, days_in_year)
+    loop_function(month_input, year_input)
 
 
 main()
