@@ -37,10 +37,11 @@ def display_array(month_input, days, year_input):
     print(months[month_input], year_input, "has", days[month_input], "days")
 
 
-def loop_function(month_input, year_input):
+def loop_function(month_input, year_input, days):
+    display_array(month_input, days, year_input)
     while 11 > month_input > 0 or year_input > 0:
         year_input = get_year()
-        if year_input >= -1:
+        if year_input <= 0:
             print("invalid")
             break
         month_input = get_month()
@@ -55,8 +56,7 @@ def main():
     year_input = get_year()
     month_input = get_month()
     days = process_leap(year_input)
-    display_array(month_input, days, year_input)
-    loop_function(month_input, year_input)
+    loop_function(month_input, year_input, days)
 
 
 main()
