@@ -1,6 +1,6 @@
 # A program that calculates averages, max, and min
 def get_times():
-    print("How many times?")
+    print("How many scores?")
     input_times = int(input())
     return input_times
 
