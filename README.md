@@ -28,3 +28,6 @@ During this lesson I learned about loops and how to use things such as while in 
 
 ## Assignment 10
 During this lesson I learned about do while loops in Python as well as nested loops in Python as well as how to use them to their greatest effect. I am sure that I can use this to create many interesting programs that can take user input to generate many different things that could be read. I also learned about loops and how to properly structure them to only do certain things a certain amount of times to my advantage such as only printing out something once or to have a loop complete its self and then move on to the next loop to continue to do what I need it to do
+
+## Assignment 11
+During this assignment I learned about arrays and how to use them by adding content to them and set them up with set number of entities or modifying certain entries. This will be incredibly useful to me in the future as I can use these things that I have learned to modify crude databases among other things. It also allows me to create and pull multiple similar variables from one function with a single return. Overall this was an incredibly important lesson and I eagerly await what other functions I can use arrays in in the future of this class. 
