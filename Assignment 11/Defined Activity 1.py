@@ -4,7 +4,7 @@
 def get_month():
     print("enter month number")
     month_input = int(input()) - 1
-    if 11 < month_input or month_input < -1:
+    if 11 < month_input or month_input <= -1:
         print("invalid")
         quit()
     return month_input
@@ -40,14 +40,15 @@ def display_array(month_input, days, year_input):
 def loop_function(month_input, year_input):
     while 11 > month_input > 0 or year_input > 0:
         year_input = get_year()
+        if year_input >= 0:
+            print("invalid")
+            break
         month_input = get_month()
         if month_input >= 11 or month_input <= 0:
-            break
-        if year_input >= 0:
+            print("invalid")
             break
         days = process_leap(year_input)
         display_array(month_input, days, year_input)
-
 
 
 def main():
