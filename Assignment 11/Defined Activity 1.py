@@ -3,60 +3,66 @@
 
 def get_month():
     print("enter month number")
-    month_input = int(input()) - 1
-    if 11 < month_input or month_input <= -1:
-        print("invalid month")
-        quit()
-    return month_input
+    month = int(input())
+    return month
 
 
 def get_year():
     print("enter year")
-    year_input = int(input())
-    if year_input <= 0:
-        print("invalid year")
-        quit()
-    return year_input
+    year = int(input())
+    return year
 
 
-def process_leap(year_input): 
-    days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 30]   
-    if year_input % 4 == 0 and year_input % 100 != 0:
-        days[1] = 29
-    elif year_input % 400 == 0:
-        days[1] = 29
-    else:
-        days[1] = 28
-    return days
-
-
-def display_array(month_input, days, year_input):
-    months = ["January", "Febuary", "March", "April", "May",
+def get_month_name(month):
+    months = ["January", "February", "March", "April", "May",
      "June", "July", "August", "September",
       "October", "November", "December"]
-    print(months[month_input], year_input, "has", days[month_input], "days")
+
+    if month < 1 or month > 12:
+        return "Unknown"
+    
+    return months[month - 1]
 
 
-def loop_function(month_input, year_input, days):
-    display_array(month_input, days, year_input)
-    while 11 > month_input > 0 or year_input >= 0:
-        year_input = get_year()
-        if year_input <= -1:
-            print("invalid year")
-            quit()
-        month_input = get_month()
-        if month_input >= 11 or month_input <= 0:
-            print("invalid month")
-            quit()
-        days = process_leap(year_input)
-        display_array(month_input, days, year_input)
+def get_month_days(year, month):
+    days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]   
+
+    if process_leap(year):
+        days[1] = 29
+
+    if month < 1 or month > 12:
+        return "Unknown"
+    
+    return days[month - 1]
+
+
+def process_leap(year): 
+    if year % 4 == 0 and year % 100 != 0:
+        return True
+    elif year % 400 == 0:
+        return True
+    else:
+        return False
+
+
+def display_results(month_name, month_days, year):
+    print(month_name, year, "has", month_days, "days")
 
 
 def main():
-    year_input = get_year()
-    month_input = get_month()
-    days = process_leap(year_input)
-    loop_function(month_input, year_input, days)
+    while True:
+        year = get_year()
+        if year <= 0:
+            break
+
+        month = get_month()
+        if month < 1 or month > 12:
+            break
+
+        month_name = get_month_name(month)
+        month_days = get_month_days(year, month)
+
+        display_results(month_name, month_days, year)
 
 
 main()

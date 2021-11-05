@@ -1,4 +1,6 @@
 # A program that calculates averages, max, and min
+
+
 def get_times():
     print("How many scores?")
     input_times = int(input())
@@ -39,9 +41,11 @@ def print_average(average):
 def main():
     input_times = get_times()
     scores = process_inputs(input_times)
+
     calculate_max(scores)
     calculate_min(scores)
     average = calculate_average(scores)
+    
     print_average(average)
 
 
