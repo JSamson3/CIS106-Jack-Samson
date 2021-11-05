@@ -41,7 +41,11 @@ def loop_function(month_input, year_input):
         month_input = get_month()
         year_input = get_year()
         days_in_year = process_leap(year_input)
-        display_array(month_input, days_in_year)
+        display_array(month_input, days_in_year, year_input)
+        if month_input >= 11 or month_input <= 0:
+            break
+        if year_input >= 0:
+            break
 
 
 def main():
