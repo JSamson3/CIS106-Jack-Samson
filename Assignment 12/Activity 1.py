@@ -1,18 +1,14 @@
 # A program that calculates averages, max, and min
 
 
-def get_times():
-    print("How many scores?")
-    input_times = int(input())
-    return input_times
-
-
-def process_inputs(input_times):
+def process_inputs():
     scores = []
-    for count in range(0, input_times):
+    newscore = 1
+    while newscore > -1:
         print(scores)
         print("input score")
-        append(scores) = int(input())
+        newscore = int(input())
+        scores.append(newscore)
     print(scores)
     return scores
 
@@ -39,8 +35,7 @@ def print_average(average):
     
 
 def main():
-    input_times = get_times()
-    scores = process_inputs(input_times)
+    scores = process_inputs()
 
     calculate_max(scores)
     calculate_min(scores)
