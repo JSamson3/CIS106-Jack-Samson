@@ -8,6 +8,8 @@ def process_inputs():
         print(scores)
         print("input score")
         newscore = int(input())
+        if newscore < 0:
+            break
         scores.append(newscore)
     print(scores)
     return scores
