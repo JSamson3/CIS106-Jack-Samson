@@ -1,27 +1,28 @@
 # A program that calculates averages, max, and min
 
 
+def get_score():
+    print("input score")
+    newscore = int(input())
+    return newscore
+
+
 def process_inputs():
     scores = []
-    newscore = 1
-    while newscore > -1:
-        print(scores)
-        print("input score")
-        newscore = int(input())
+    while True:
+        newscore = get_score()
         if newscore < 0:
             break
         scores.append(newscore)
-        scores.sort()
-    print(scores)
     return scores
 
 
 def calculate_max(scores):
-    print("high", max(scores))
+    return max(scores)
 
 
 def calculate_min(scores):
-    print("low", min(scores))
+    return min(scores)
 
 
 def calculate_average(scores):
@@ -33,18 +34,28 @@ def calculate_average(scores):
     return average
 
 
-def print_average(average):
+def sort_array(array):
+    array.sort(reverse=True)
+    return array
+
+
+def print_results(high, low, average, scores):
+    print("high", high)
+    print("low", low)
     print("average is", average)
+    print("scores:", scores)
     
 
 def main():
     scores = process_inputs()
 
-    calculate_max(scores)
-    calculate_min(scores)
+    high = calculate_max(scores)
+    low = calculate_min(scores)
     average = calculate_average(scores)
     
-    print_average(average)
+    scores = sort_array(scores)
+
+    print_results(high, low, average, scores)
 
 
 main()
