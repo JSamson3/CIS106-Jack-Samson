@@ -1,4 +1,6 @@
 #A simple program that asks for your name
+
+
 def get_first_name():
     print("input first name")
     first = input(str())
@@ -19,5 +21,6 @@ def main():
     first = get_first_name()
     last = get_last_name()
     display_answer(first, last)
+
 
 main()
