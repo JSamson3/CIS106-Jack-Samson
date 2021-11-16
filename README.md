@@ -34,3 +34,6 @@ During this assignment I learned about arrays and how to use them by adding cont
 
 ## Assignment 12
 During this assignment I learned about how to use dynamic arrays in the Python programing language. Dynamic arrays are much like regular arrays in that they contain data only the difference is that these arrays can stretch to meet demand as they can take on many different types of sizes. This is an incredibly important skill to learn as it will allow me to create tools in Python that can scale to whatever task I set it towards as a dynamic array would allow me to do. Overall I question why this was separated into its own chapter separate from regular arrays.
+
+## Assignment 13
+During this assignment I learned about strings and how to implement them into my code primarily in the fact that they are very different to things such as integers and are incompatible most of the time as they will very often cause errors in Python if you do not implement them correctly or don’t declare them properly as the program will make assumptions about what your variable is. Overall I personally believe that this was a very important lesson as text and other strings are a major backbone in generating pages and such and I will more than likely using this knowledge very often going forward.
