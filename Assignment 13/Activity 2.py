@@ -1,3 +1,6 @@
+# A simple program that reverses the line of text that you give it
+
+
 def get_input():
     print("input a line of text")
     userinput = input(str())
