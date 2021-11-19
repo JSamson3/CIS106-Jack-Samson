@@ -5,8 +5,10 @@ def get_name():
     print("Input first then last name")
     userinput = input(str())
     if userinput.find(" ") == -1:
-        print("input a valid name")
-        userinput = input(str())
+        while userinput.find(" ") == -1:
+            print("input a valid name")
+            userinput = input(str())
+        return userinput
     else:
         return userinput
 
