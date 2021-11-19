@@ -1,10 +1,14 @@
-#A simple program that asks for your name
+# A simple program that asks for your name
 
 
 def get_name():
     print("Input first then last name")
     userinput = input(str())
-    return userinput
+    if userinput.find(" ") == -1:
+        print("input a valid name")
+        userinput = input(str())
+    else:
+        return userinput
 
 
 def split_name(userinput):
