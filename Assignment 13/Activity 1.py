@@ -2,32 +2,36 @@
 
 
 def get_name():
-    print("input first and last name")
-    name = input(str())
-    return name
+    print("Input first then last name")
+    userinput = input(str())
+    return userinput
 
 
-def get_first_name():
-    print("input first name")
-    first = input(str())
-    return first
+def split_name(userinput):
+    userinput = userinput.split()
+    return userinput
 
 
-def get_last_name():
-    print("input last name")
-    last = input(str())
-    return last
+def split_first(userinput):
+    firstname = userinput[0]
+    return firstname
 
 
-def display_answer(first, last, name):
-    print(last, first[0:1] + ".")
-    print (name[1])
+def split_last(userinput):
+    lastname = userinput[1]
+    return lastname
+
+
+def print_name(firstname, lastname):
+    print(lastname + ", " + firstname[0] + ".")
 
 
 def main():
-    first = get_first_name()
-    last = get_last_name()
-    display_answer(first, last)
+    userinput = get_name()
+    userinput = split_name(userinput)
+    firstname = split_first(userinput)
+    lastname = split_last(userinput)
+    print_name(firstname, lastname)
 
 
 main()
