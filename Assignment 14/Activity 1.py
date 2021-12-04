@@ -22,25 +22,23 @@ def get_average(file):
     for x in file:
         output = output + int(x)
     number = len(file)
-    average = output / number
-    return average
+    mean = output / number
+    return mean
 
 
-def print_answer(average, low, high, file):
+def print_answer(mean, low, high, file):
     print("high", high)
     print("low", low)
-    print("average is", average)
+    print("mean is", mean)
     print("scores:", file)
-
 
 
 def main():
     file = read_file()
     high = get_max(file)
     low = get_min(file)
-    average = get_average(file)
-    print_answer(high, low, average, file)
-
+    mean = get_average(file)
+    print_answer(high, low, mean, file)
 
 
 main()
