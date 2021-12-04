@@ -3,7 +3,7 @@
 
 def read_file():
     f = open("Assignment 14\scores.txt")
-    file = f.read().replace("\n", ",").split(",")
+    file = f.read().replace("\n", ",").split(",")[3::2]
     f.close()
     print(file)
     return file
@@ -20,9 +20,9 @@ def get_min(file):
 def get_average(file):
     output = 0
     for x in file:
-        output = output + x
+        output = output + int(x)
     number = len(file)
-    average = output / ((number - 2 ) / 2)
+    average = output / number
     return average
 
 
