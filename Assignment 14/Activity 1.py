@@ -1,10 +1,10 @@
-# A simple program that pulls out text from a file and displays it from high to low
+# A simple program that pulls out text from a file and displays its average
 
 
 def read_file():
-    f = open("scores.txt")
-    file = f.read().replace("\n", ",").split(",")[3::2]
-    f.close()
+    text = open("scores.txt")
+    file = text.read().replace("\n", ",").split(",")[3::2]
+    text.close()
     print(file)
     return file
 
