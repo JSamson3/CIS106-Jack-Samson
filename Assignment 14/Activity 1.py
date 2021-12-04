@@ -2,7 +2,7 @@
 
 
 def read_file():
-    f = open("Assignment 14\scores.txt")
+    f = open("scores.txt")
     file = f.read().replace("\n", ",").split(",")[3::2]
     f.close()
     print(file)
