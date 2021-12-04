@@ -9,7 +9,7 @@ def read_file():
         print(file)
         return file
     except:
-            print("An error has occured")
+        print("An error has occured")
 
 
 def get_max(file):
