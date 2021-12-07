@@ -1,45 +1,47 @@
 # A simple program that pulls out text from a file and displays its average
-
+#
+# References:
+#   https://www.geeksforgeeks.org/python-converting-all-strings-in-list-to-integers/
 
 def read_file():
-    text = open("Assignment 14\scores.txt")
-    file = text.read().replace("\n", ",").split(",")[3::2]
-    text.close()
-    print(file)
-    return file
+    file = open("scores.txt")
+    text = file.read().replace("\n", ",").split(",")[3::2]
+    file.close()
+    text = [int(i) for i in text]
+    print(text)
+    return text
 
 
-def get_max(file):
-    int("".join(str(i) for i in file))
-    return max(file)
+def get_max(text):
+    return max(text)
     
 
-def get_min(file):
-    return min(file)
+def get_min(text):
+    return min(text)
 
 
-def get_average(file):
+def get_average(text):
     output = 0
-    for x in file:
+    for x in text:
         output = output + int(x)
-    number = len(file)
+    number = len(text)
     mean = output / number
     return mean
 
 
-def print_answer(high, low, mean, file):
+def print_answer(high, low, mean, text):
     print("high", high)
     print("low", low)
     print("mean is", mean)
-    print("scores:", file)
+    print("scores:", text)
 
 
 def main():
-    file = read_file()
-    high = get_max(file)
-    low = get_min(file)
-    mean = get_average(file)
-    print_answer(high, low, mean, file)
+    text = read_file()
+    high = get_max(text)
+    low = get_min(text)
+    mean = get_average(text)
+    print_answer(high, low, mean, text)
 
 
 main()
