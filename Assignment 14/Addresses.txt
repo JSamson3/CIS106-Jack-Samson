@@ -1,1 +1,11 @@
-Firstname Lastname\n123 Any Street\nCity, State/Province/Region PostalCode\n1stname 2ndname\n123 Any Street\nCity, State/Province/Region PostalCode\n3rdname 4thname\n123 Any Street\nCity, State/Province/Region PostalCode
+Firstname1 Lastname1
+111 Any Street
+City, 11 11111
+
+Firstname2 Lastname2
+222 Any Street
+City 2, 22 22222
+
+Firstname3 Lastname3
+333 Any Street
+City 3, 33 33333
