@@ -12,7 +12,7 @@
 #         temp = open("Addressess.txt", "x")
 #         temp.write("Firstname Lastname\n123 Any Street\nCity, State/Province/Region PostalCode\n1stname 2ndname\n123 Any Street\nCity, State/Province/Region PostalCode\n3rdname 4thname\n123 Any Street\nCity, State/Province/Region PostalCode")
 #         temp.close()
-#         temp = open("thing.txt")
+#         temp = open("Adressess.txt")
 #         text = temp.read().splitlines()
 #         temp.close()
 #         return text
