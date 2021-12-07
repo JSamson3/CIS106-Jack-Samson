@@ -2,22 +2,23 @@
 
 def open_file():
     print("input")
-    text = open(str(input()))
-    file = text.read()
+    text = open(str(input()), "r")
+    print(text)
+    file = text.read().replace("<", ">").strip().split(">").join()
+    text.close()
     print(file)
     return file
 
 
 def parse_file1(file):
     tags = []
-    if file.find("<h1>") >= 0:
-        file.split("<h1>")
-        file.split("</h1>")
+    if file.count("h1") >= 0:
+        file.remove("h1")
+        file.remove("/h1")
         tags.append("<h1>")
         tags.append("</h1>")
     print(tags)
     return tags
-
 
 
 def main():
