@@ -1,22 +1,20 @@
 # A simple program that prints out addresses for who knows what purpose
 
 
-from os import close
-
-
 def create_func():
+    userinput = str(input())
     try:
-        f = open("thing.txt")
-        text = f.read.splitlines()
-        f.close()
+        temp = open(userinput)
+        text = temp.read.splitlines()
+        temp.close()
         return text
     except:
-        f = open("thing.txt", "x")
-        f.write("Firstname Lastname\n123 Any Street\nCity, State/Province/Region PostalCode\n1stname 2ndname\n123 Any Street\nCity, State/Province/Region PostalCode\n3rdname 4thname\n123 Any Street\nCity, State/Province/Region PostalCode")
-        f.close()
-        f = open("thing.txt")
-        text = f.read().splitlines()
-        f.close()
+        temp = open("Addressess.txt", "x")
+        temp.write("Firstname Lastname\n123 Any Street\nCity, State/Province/Region PostalCode\n1stname 2ndname\n123 Any Street\nCity, State/Province/Region PostalCode\n3rdname 4thname\n123 Any Street\nCity, State/Province/Region PostalCode")
+        temp.close()
+        temp = open("thing.txt")
+        text = temp.read().splitlines()
+        temp.close()
         return text
 
 
