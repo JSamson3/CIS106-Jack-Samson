@@ -2,7 +2,7 @@
 
 
 def read_file():
-    text = open("scores.txt")
+    text = open("Assignment 14\scores.txt")
     file = text.read().replace("\n", ",").split(",")[3::2]
     text.close()
     print(file)
@@ -10,6 +10,7 @@ def read_file():
 
 
 def get_max(file):
+    int("".join(str(i) for i in file))
     return max(file)
     
 
@@ -26,7 +27,7 @@ def get_average(file):
     return mean
 
 
-def print_answer(mean, low, high, file):
+def print_answer(high, low, mean, file):
     print("high", high)
     print("low", low)
     print("mean is", mean)
