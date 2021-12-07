@@ -1,21 +1,10 @@
 # A simple program that prints out addresses for who knows what purpose
 
-
-# def create_func():
-#     userinput = str(input())
-#     try:
-#         temp = open(userinput)
-#         text = temp.read.splitlines()
-#         temp.close()
-#         return text
-#     except:
-#         temp = open("Addressess.txt", "x")
-#         temp.write("Firstname Lastname\n123 Any Street\nCity, State/Province/Region PostalCode\n1stname 2ndname\n123 Any Street\nCity, State/Province/Region PostalCode\n3rdname 4thname\n123 Any Street\nCity, State/Province/Region PostalCode")
-#         temp.close()
-#         temp = open("Adressess.txt")
-#         text = temp.read().splitlines()
-#         temp.close()
-#         return text
+def read_file():
+    file = open("addresses.txt")
+    text = file.readlines()
+    file.close()
+    return text
 
 
 def get_first(text):
@@ -28,39 +17,9 @@ def get_last(text):
     return lastname
     
 
-def get_secondfirst(text):
-    secondfirst = text[3].split(" ")[0]
-    return secondfirst
-
-
-def get_secondlast(text):
-    secondlast = text[3].split(" ")[1]
-    return secondlast
-
-
-def get_thirdfirst(text):
-    thirdfirst = text[6].split(" ")[0]
-    return thirdfirst
-
-
-def get_thirdlast(text):
-    thirdlast = text[6].split(" ")[1]
-    return thirdlast
-
-
 def get_firstpost(text):
     firstpost = text[2].split(" ")
     return firstpost
-
-
-def get_secondpost(text):
-    secondpost = text[5].split(" ")
-    return secondpost
-
-
-def get_thirdpost(text):
-    thirdpost = text[8].split(" ")
-    return thirdpost
 
 
 def print_function(firstname, lastname, secondfirst, secondlast, thirdfirst, thirdlast, text, firstpost, secondpost, thirdpost):
@@ -70,17 +29,16 @@ def print_function(firstname, lastname, secondfirst, secondlast, thirdfirst, thi
 
 
 def main():
-    text = create_func()
-    firstname = get_first(text)
-    lastname = get_last(text)
-    secondfirst = get_secondfirst(text)
-    secondlast = get_secondlast(text)
-    thirdfirst = get_thirdfirst(text)
-    thirdlast = get_thirdlast(text)
-    firstpost = get_firstpost(text)
-    secondpost = get_secondpost(text)
-    thirdpost = get_thirdpost(text)
-    print_function(firstname, lastname, secondfirst, secondlast, thirdfirst, thirdlast, text, firstpost, secondpost, thirdpost)
+    text = read_file()
+    for index in range(len(text)):
+        if index % 4 == 0:
+            print(index, text[index].strip())
+
+
+    # firstname = get_first(text)
+    # lastname = get_last(text)
+    # firstpost = get_firstpost(text)
+    # print_function(firstname, lastname, secondfirst, secondlast, thirdfirst, thirdlast, text, firstpost, secondpost, thirdpost)
 
 
 main()
