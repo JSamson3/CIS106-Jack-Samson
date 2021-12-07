@@ -7,8 +7,7 @@ from os import close
 def create_func():
     try:
         f = open("thing.txt")
-        text = f.read.replace(",", "\n").splitlines()
-        print(text)
+        text = f.read.splitlines()
         f.close()
         return text
     except:
@@ -17,7 +16,6 @@ def create_func():
         f.close()
         f = open("thing.txt")
         text = f.read().splitlines()
-        print(text)
         f.close()
         return text
 
