@@ -1,7 +1,7 @@
 # A simple program that prints out addresses for who knows what purpose
 
 def read_file():
-    file = open("Addresses.txt")
+    file = open("addresses.txt")
     text = file.readlines()
     file.close()
     return text
@@ -32,7 +32,7 @@ def main():
         if index % 4 == 2:
             print(text[index].strip(), sep=", ", end=", ")
         if index % 4 == 4:
-            print(index, text[index].strip(), sep=", ", end="\n")
+            print(text[index].strip().split(" ")[0], text[index].strip().split(" ")[1], sep=", ")
 
     # firstname = get_first(text)
     # lastname = get_last(text)
