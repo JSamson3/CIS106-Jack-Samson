@@ -12,7 +12,8 @@ def main():
     for index in range(len(text)):
         if index < 4:
             if index % 4 == 0:
-                print(text[index].strip().split(" ")[1], text[index].strip().split(" ")[0], sep=", ", end=", ")
+                print(text[index].strip().split(" ")[1], end=", ")
+                print(text[index].strip().split(" ")[0], sep=", ", end=", ")
             if index % 4 == 1:
                 print(text[index].strip(), sep=", ", end=", ")
             if index % 4 == 2:
