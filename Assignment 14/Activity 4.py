@@ -1,7 +1,7 @@
 # A simple program that prints out addresses for who knows what purpose
 
 def read_file():
-    file = open("Assignment 14\Addresses.txt")
+    file = open("Addresses.txt")
     text = file.readlines()
     file.close()
     return text
