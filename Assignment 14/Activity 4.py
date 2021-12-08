@@ -7,8 +7,7 @@ def read_file():
     return new
 
 
-def main():
-    new = read_file()
+def output_function(new):
     for index in range(len(new)):
         if index < 4:
             if index % 4 == 0:
@@ -30,6 +29,11 @@ def main():
                 print(new[index].strip().split(",")[0], sep=", ", end=", ")
                 print(new[index].strip().replace(", ", " ").split()[2], end=", ")
                 print(new[index].strip().replace(",", " ").split()[3], end="\n")
+
+
+def main():
+    new = read_file()
+    output_function(new)
 
 
 main()
