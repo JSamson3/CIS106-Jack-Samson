@@ -13,7 +13,7 @@ def user_input():
 
 
 def read_file():
-    if os.path.exists("plant_catalog.xml") == True:
+    if os.path.exists("plant_catalog.xml") is True:
         try:
             if os.stat("plant_catalog.xml").st_size > 0:
                 file = open("plant_catalog.xml")
@@ -53,7 +53,7 @@ def process_text(text, answer):
     else:
         try:
             answer = int(answer)
-            for index in range(answer*8):
+            for index in range(answer * 8):
                 line = text[index].strip()
                 if index % 8 == 3:
                     common = line.split(">")[1].split("</")[0]
