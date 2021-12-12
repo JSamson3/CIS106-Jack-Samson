@@ -14,15 +14,14 @@ def read_file():
                 text = file.readlines()
             else:
                 print("Empty file")
-                sys.exit
+                sys.exit()
         except OSError:
             print("An error has occured")
-            sys.exit
+            sys.exit()
+        return text
     else:
         print("File does not exist")
-        sys.exit
-    return text
-
+        sys.exit()
 
 def process_text(text):
     count = 0
