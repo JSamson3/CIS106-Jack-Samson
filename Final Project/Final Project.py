@@ -8,12 +8,12 @@ import sys
 
 def user_input():
     print("input")
-    answer = input()
+    answer = str(input())
     return answer
 
 
 def read_file():
-    if os.path.exists("plant_catalog.xml") == "True":
+    if os.path.exists("plant_catalog.xml") == True:
         try:
             if os.stat("plant_catalog.xml").st_size > 0:
                 file = open("plant_catalog.xml")
@@ -33,7 +33,7 @@ def read_file():
 def process_text(text, answer):
     count = 0
     total = 0
-    if answer == "" or answer > len(text):
+    if answer == "" or int(answer) > len(text):
         for index in range(len(text)):
                 line = text[index].strip()
                 if index % 8 == 3:
@@ -67,7 +67,6 @@ def process_text(text, answer):
                     count = count + 1
                     price = float(line.split(">$")[1].split("</")[0])
                     total = total + price
-                    print(f"{common} ({botanitcal}) - {zone} - {light}")
                     print(f"{count} counted average:{round(price / count, 2)}$\r")    
         except OSError:
             print("Bad Data")
