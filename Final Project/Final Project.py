@@ -5,7 +5,7 @@ from os import read
 
 
 def read_file():
-    file = open("Final Project\plant_catalog.xml")
+    file = open("plant_catalog.xml")
     text = file.readlines()
     return text
 
