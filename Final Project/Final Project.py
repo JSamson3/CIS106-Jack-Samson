@@ -2,11 +2,16 @@
 
 
 from os import read
+import sys
 
 
 def read_file():
-    file = open("plant_catalog.xml")
-    text = file.readlines()
+    try:
+        file = open("plant_catalog.xml")
+        text = file.readlines()
+    except:
+        print("an error has occured")
+        sys.exit()
     return text
 
 
