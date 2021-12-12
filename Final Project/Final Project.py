@@ -2,16 +2,21 @@
 
 
 from os import read
+import os
 import sys
 
 
 def read_file():
     try:
-        file = open("plant_catalog.xml")
-        text = file.readlines()
-    except:
-        print("an error has occured")
-        sys.exit()
+        if os.stat("plant_catalog.xml").st_size > 0:
+            file = open("plant_catalog.xml")
+            text = file.readlines()
+        else:
+            print("empty file")
+            sys.exit
+    except OSError:
+        print("An error has occured")
+        sys.exit
     return text
 
 
@@ -33,7 +38,7 @@ def process_text(text):
             price = float(line.split(">$")[1].split("</")[0])
             total = total + price
             print(f"{common} ({botanitcal}) - {zone} - {light} - {price}")
-            print(f"{count} counted {round(count / price, 2)}\r")
+            print(f"{count} counted average:{round(count / price, 2)}$\r")
 
 
 def main():
