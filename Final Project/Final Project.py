@@ -23,6 +23,7 @@ def read_file():
         print("File does not exist")
         sys.exit()
 
+
 def process_text(text):
     count = 0
     total = 0
@@ -41,6 +42,7 @@ def process_text(text):
                 count = count + 1
                 price = float(line.split(">$")[1].split("</")[0])
                 total = total + price
+                print(f"{common} ({botanitcal}) - {zone} - {light}")
                 print(f"{count} counted average:{round(price / count, 2)}$\r")
     except OSError:
         print("Bad Data")
