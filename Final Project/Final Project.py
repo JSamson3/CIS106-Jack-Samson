@@ -6,6 +6,12 @@ import os.path
 import sys
 
 
+def user_input():
+    print("input")
+    answer = input()
+    return answer
+
+
 def read_file():
     if os.path.exists("plant_catalog.xml") == "True":
         try:
@@ -24,34 +30,54 @@ def read_file():
         sys.exit()
 
 
-def process_text(text):
+def process_text(text, answer):
     count = 0
     total = 0
-    try:
+    if answer == "" or answer > len(text):
         for index in range(len(text)):
-            line = text[index].strip()
-            if index % 8 == 3:
-                common = line.split(">")[1].split("</")[0]
-            elif index % 8 == 4:
-                botanitcal = line.split(">")[1].split("</")[0]
-            elif index % 8 == 5:
-                zone = line.split(">")[1].split("</")[0]
-            elif index % 8 == 6:
-                light = line.split(">")[1].split("</")[0]
-            elif index % 8 == 7:
-                count = count + 1
-                price = float(line.split(">$")[1].split("</")[0])
-                total = total + price
-                print(f"{common} ({botanitcal}) - {zone} - {light}")
-                print(f"{count} counted average:{round(price / count, 2)}$\r")
-    except OSError:
-        print("Bad Data")
-        sys.exit
+                line = text[index].strip()
+                if index % 8 == 3:
+                    common = line.split(">")[1].split("</")[0]
+                elif index % 8 == 4:
+                    botanitcal = line.split(">")[1].split("</")[0]
+                elif index % 8 == 5:
+                    zone = line.split(">")[1].split("</")[0]
+                elif index % 8 == 6:
+                    light = line.split(">")[1].split("</")[0]
+                elif index % 8 == 7:
+                    count = count + 1
+                    price = float(line.split(">$")[1].split("</")[0])
+                    total = total + price
+                    print(f"{common} ({botanitcal}) - {zone} - {light}")
+                    print(f"{count} counted average:{round(price / count, 2)}$\r")
+    else:
+        try:
+            answer = int(answer)
+            for index in range(answer*8):
+                line = text[index].strip()
+                if index % 8 == 3:
+                    common = line.split(">")[1].split("</")[0]
+                elif index % 8 == 4:
+                    botanitcal = line.split(">")[1].split("</")[0]
+                elif index % 8 == 5:
+                    zone = line.split(">")[1].split("</")[0]
+                elif index % 8 == 6:
+                    light = line.split(">")[1].split("</")[0]
+                elif index % 8 == 7:
+                    count = count + 1
+                    price = float(line.split(">$")[1].split("</")[0])
+                    total = total + price
+                    print(f"{common} ({botanitcal}) - {zone} - {light}")
+                    print(f"{count} counted average:{round(price / count, 2)}$\r")    
+        except OSError:
+            print("Bad Data")
+            sys.exit
 
 
 def main():
+    answer = user_input()
     text = read_file()
-    process_text(text)
+    process_text(text, answer)
 
 
 main()
