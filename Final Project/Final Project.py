@@ -2,19 +2,24 @@
 
 
 import os
+import os.path
 import sys
 
 
 def read_file():
-    try:
-        if os.stat("plant_catalog.xml").st_size > 0:
-            file = open("plant_catalog.xml")
-            text = file.readlines()
-        else:
-            print("Empty file")
+    if os.path.exists("plant_catalog.xml") == "True":
+        try:
+            if os.stat("plant_catalog.xml").st_size > 0:
+                file = open("plant_catalog.xml")
+                text = file.readlines()
+            else:
+                print("Empty file")
+                sys.exit
+        except OSError:
+            print("An error has occured")
             sys.exit
-    except OSError:
-        print("An error has occured")
+    else:
+        print("File does not exist")
         sys.exit
     return text
 
@@ -22,21 +27,25 @@ def read_file():
 def process_text(text):
     count = 0
     total = 0
-    for index in range(len(text)):
-        line = text[index].strip()
-        if index % 8 == 3:
-            common = line.split(">")[1].split("</")[0]
-        elif index % 8 == 4:
-            botanitcal = line.split(">")[1].split("</")[0]
-        elif index % 8 == 5:
-            zone = line.split(">")[1].split("</")[0]
-        elif index % 8 == 6:
-            light = line.split(">")[1].split("</")[0]
-        elif index % 8 == 7:
-            count = count + 1
-            price = float(line.split(">$")[1].split("</")[0])
-            total = total + price
-            print(f"{count} counted average:{round(price / count, 2)}$\r")
+    try:
+        for index in range(len(text)):
+            line = text[index].strip()
+            if index % 8 == 3:
+                common = line.split(">")[1].split("</")[0]
+            elif index % 8 == 4:
+                botanitcal = line.split(">")[1].split("</")[0]
+            elif index % 8 == 5:
+                zone = line.split(">")[1].split("</")[0]
+            elif index % 8 == 6:
+                light = line.split(">")[1].split("</")[0]
+            elif index % 8 == 7:
+                count = count + 1
+                price = float(line.split(">$")[1].split("</")[0])
+                total = total + price
+                print(f"{count} counted average:{round(price / count, 2)}$\r")
+    except OSError:
+        print("Bad Data")
+        sys.exit
 
 
 def main():
