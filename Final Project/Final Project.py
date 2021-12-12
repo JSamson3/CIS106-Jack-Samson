@@ -1,7 +1,6 @@
 # A program that reads an xml file and prints out the data contained inside
 
 
-from os import read
 import os
 import sys
 
@@ -12,7 +11,7 @@ def read_file():
             file = open("plant_catalog.xml")
             text = file.readlines()
         else:
-            print("empty file")
+            print("Empty file")
             sys.exit
     except OSError:
         print("An error has occured")
@@ -37,8 +36,7 @@ def process_text(text):
             count = count + 1
             price = float(line.split(">$")[1].split("</")[0])
             total = total + price
-            print(f"{common} ({botanitcal}) - {zone} - {light} - {price}")
-            print(f"{count} counted average:{round(count / price, 2)}$\r")
+            print(f"{count} counted average:{round(price / count, 2)}$\r")
 
 
 def main():
