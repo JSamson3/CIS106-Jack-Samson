@@ -1,7 +1,6 @@
 # A program that reads an xml file and prints out the data contained inside
 
 
-import os
 import sys
 
 
