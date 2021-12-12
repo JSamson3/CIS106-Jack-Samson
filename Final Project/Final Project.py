@@ -1,36 +1,34 @@
-# A thing
+# A program that reads an xml file and prints out the data contained inside
+
 
 from os import read
-import xml.etree.ElementTree as ET
 
 
 def read_file():
-    file = ET.parse("Final Project\plant_catalog.xml")
-    x = file.readlines()
-    text = x
-    print(text)
+    file = open("Final Project\plant_catalog.xml")
+    text = file.readlines()
     return text
 
 
 def process_text(text):
     count = 0
+    total = 0
     for index in range(len(text)):
         line = text[index].strip()
-        if index % 10 == 0:
-            common = line.split("<COMMON>")[0].split("</COMMON>")
-        elif index % 10 == 1:
-            botanitcal = line.split("<BOTANICAL>")[0].split("</BOTANICAL>")[0]
-        elif index % 10 == 2:
-            zone = line.split("<ZONE>")[0].split("<?ZONE>")[0]
-        elif index % 10 == 3:
-            light = line.split("<LIGHT>")[0].split("</LIGHT")[0]
-        elif index % 10 == 4:
+        if index % 8 == 3:
+            common = line.split(">")[1].split("</")[0]
+        elif index % 8 == 4:
+            botanitcal = line.split(">")[1].split("</")[0]
+        elif index % 8 == 5:
+            zone = line.split(">")[1].split("</")[0]
+        elif index % 8 == 6:
+            light = line.split(">")[1].split("</")[0]
+        elif index % 8 == 7:
             count = count + 1
-            price = line.split("<PRICE>")[0].split("</PRICE>")[0]
-            print(f"{common} ({botanitcal}) - {zone} - {light} - {price}"
-            f"{price}")
-            print(f"{count} percent complete         \r")
-
+            price = float(line.split(">$")[1].split("</")[0])
+            total = total + price
+            print(f"{common} ({botanitcal}) - {zone} - {light} - {price}")
+            print(f"{count} counted {round(count / price, 2)}\r")
 
 
 def main():
