@@ -9,7 +9,7 @@ import sys
 def read_file():
     if os.path.isfile("plant_catalog.xml") is True:
         try:
-            if os.stat("plant_catalog.xml").st_size > 0:
+            if os.stat("plant_catalog.xml").st_size > 7000:
                 file = open("plant_catalog.xml")
                 text = file.readlines()
             else:
