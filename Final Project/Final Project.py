@@ -50,7 +50,7 @@ def process_text(text, answer):
                     total = total + price
                     print(f"{common} ({botanitcal}) - {zone} - {light}")
                     print(f"{count} counted average:{round(price / count, 2)}$\r")
-    else:
+    elif answer > 0:
         try:
             answer = int(answer)
             for index in range(answer * 8):
@@ -71,11 +71,28 @@ def process_text(text, answer):
         except OSError:
             print("Bad Data")
             sys.exit
+    elif answer == "two lines":
+            for index in range(answer * 8):
+                line = text[index].strip()
+            if index % 8 == 3:
+                common = line.split(">")[1].split("</")[0]
+            elif index % 8 == 4:
+                botanitcal = line.split(">")[1].split("</")[0]
+            elif index % 8 == 5:
+                zone = line.split(">")[1].split("</")[0]
+            elif index % 8 == 6:
+                light = line.split(">")[1].split("</")[0]
+            elif index % 8 == 7:
+                count = count + 1
+                price = float(line.split(">$")[1].split("</")[0])
+                total = total + price
+                print(f"{count} counted average:{round(price / count, 2)}$\r")
+
 
 
 def main():
-    answer = user_input()
     text = read_file()
+    answer = user_input()
     process_text(text, answer)
 
 
