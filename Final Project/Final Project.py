@@ -30,7 +30,7 @@ def process_text(text):
     for index in range(len(text)):
         line = text[index].strip()
         if index % 8 == 3:
-            if len(line) < 2:
+            if len(line) < 3:
                 print("No data")
                 sys.exit()
             common = line.split(">")[1].split("</")[0]
