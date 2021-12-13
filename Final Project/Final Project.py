@@ -12,11 +12,11 @@ def read_file():
             if os.stat("plant_catalog.xml").st_size > 0:
                 file = open("plant_catalog.xml")
                 text = file.readlines()
-                if text.count("  <PLANT>") < 0:
+                if text.count("<CATALOG>") <= 0:
                     print("No data")
                     sys.exit()
             else:
-                print("No data")
+                print("No file")
                 sys.exit()
         except OSError:
             print("An error has occured")
