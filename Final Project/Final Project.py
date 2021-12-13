@@ -9,11 +9,11 @@ import sys
 def read_file():
     if os.path.exists("plant_catalog.xml") is True:
         try:
-            if os.stat("plant_catalog.xml").st_size > 1:
+            if os.stat("plant_catalog.xml").st_size > 0:
                 file = open("plant_catalog.xml")
                 text = file.readlines()
             else:
-                print("Empty file")
+                print("No data")
                 sys.exit()
         except OSError:
             print("An error has occured")
@@ -45,7 +45,7 @@ def process_text(text):
                 print("missing data")
             total = total + price
             print(f"{common} ({botanitcal}) - {zone} - {light} - ${price}")
-            print(f"{count} items - ${round(total / count, 2)} average price\r")
+            print(f"{count} items - ${round(total / count, 2)} average price")
 
 
 def main():
