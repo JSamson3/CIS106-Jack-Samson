@@ -9,7 +9,7 @@ import sys
 def read_file():
     if os.path.exists("plant_catalog.xml") is True:
         try:
-            if os.stat("plant_catalog.xml").st_size > 50:
+            if os.stat("plant_catalog.xml").st_size > 1:
                 file = open("plant_catalog.xml")
                 text = file.readlines()
             else:
@@ -39,7 +39,10 @@ def process_text(text):
                 light = line.split(">")[1].split("</")[0]
             elif index % 8 == 7:
                 count = count + 1
-                price = float(line.split(">$")[1].split("</")[0])
+                try:
+                    price = float(line.split(">$")[1].split("</")[0])
+                except:
+                    print("missing data")
                 total = total + price
                 print(f"{common} ({botanitcal}) - {zone} - {light}")
                 print(f"{count} counted average:{round(price / count, 2)}$\r")
