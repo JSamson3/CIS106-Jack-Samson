@@ -29,11 +29,10 @@ def process_text(text):
     total = 0
     for index in range(len(text)):
         line = text[index].strip()
-        if line.index("<") is False:
-            print("No data")
-            sys.exit()
         if index % 8 == 3:
             common = line.split(">")[1].split("</")[0]
+            if common == "":
+                sys.exit()
         elif index % 8 == 4:
             botanitcal = line.split(">")[1].split("</")[0]
         elif index % 8 == 5:
