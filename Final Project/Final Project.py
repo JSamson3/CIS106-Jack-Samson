@@ -7,10 +7,10 @@ import sys
 
 
 def read_file():
-    if os.path.exists("plant_catalog.xml") is True:
+    if os.path.exists("Final Project\plant_catalog.xml") is True:
         try:
-            if os.stat("plant_catalog.xml").st_size > 1:
-                file = open("plant_catalog.xml")
+            if os.stat("Final Project\plant_catalog.xml").st_size > 1:
+                file = open("Final Project\plant_catalog.xml")
                 text = file.readlines()
             else:
                 print("Empty file")
@@ -44,8 +44,8 @@ def process_text(text):
                 except:
                     print("missing data")
                 total = total + price
-                print(f"{common} ({botanitcal}) - {zone} - {light}")
-                print(f"{count} counted average:{round(price / count, 2)}$\r")
+                print(f"{common} ({botanitcal}) - {zone} - {light} {price}")
+                print(f"{count} items - ${round(total / count, 2)} average price\r")
 
 
 def main():
