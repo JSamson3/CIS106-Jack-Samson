@@ -7,7 +7,7 @@ import sys
 
 
 def read_file():
-    if os.path.exists("plant_catalog.xml") is True:
+    if os.path.isfile("plant_catalog.xml") is True:
         try:
             if os.stat("plant_catalog.xml").st_size > 0:
                 file = open("plant_catalog.xml")
