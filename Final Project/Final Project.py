@@ -9,7 +9,7 @@ import sys
 def read_file():
     if os.path.exists("plant_catalog.xml") is True:
         try:
-            if os.stat("plant_catalog.xml").st_size > 0:
+            if os.stat("plant_catalog.xml").st_size > 50:
                 file = open("plant_catalog.xml")
                 text = file.readlines()
             else:
@@ -24,7 +24,7 @@ def read_file():
         sys.exit()
 
 
-def process_text(text, answer):
+def process_text(text):
     count = 0
     total = 0
     for index in range(len(text)):
